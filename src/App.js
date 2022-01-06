@@ -20,14 +20,14 @@ function App() {
   const moveBox = useCallback(
     (id, left, top) => {
       //有可能此block已经在合并的时候被删除了
-      if(!state.columns[id])return
+      if (!state.columns[id]) return;
       const newState = { ...state };
       newState.columns[id].x = left;
       newState.columns[id].y = top;
       //把最新操作的block置顶
-      const nOrder = newState.columnOrder.filter((x) => x !== id);
-      nOrder.push(id);
-      newState.columnOrder = nOrder;
+      // const nOrder = newState.columnOrder.filter((x) => x !== id);
+      // nOrder.push(id);
+      // newState.columnOrder = nOrder; 
       setState((state) => newState);
     },
     [state]
@@ -90,7 +90,7 @@ function App() {
       const nState = { ...state };
       nState.columns[item.pid].taskIds.splice(item.index, 1);
       nState.columns[nBlock.id] = nBlock;
-      nState.columnOrder.push(nBlock.id);
+      // nState.columnOrder = [...nState.columnOrder, nBlock.id];
       setState((state) => nState);
     }
   };
@@ -106,44 +106,57 @@ function App() {
         source.index === destination.index
       )
         return;
-
-      const sTaskIds = state.columns[source.droppableId].taskIds;
-      const dTaskIds = state.columns[destination.droppableId].taskIds;
-
-      const movingId = removeAtIndex(sTaskIds, source.index);
-      insertAtIndex(dTaskIds, destination.index, movingId);
       const newState = {
         ...state,
       };
-      setState(newState);
+      const sTaskIds = newState.columns[source.droppableId].taskIds;
+      const dTaskIds = newState.columns[destination.droppableId].taskIds;
+
+      const movingId = removeAtIndex(sTaskIds, source.index);
+      insertAtIndex(dTaskIds, destination.index, movingId);
+      //如果source block中没有剩余step，则删除此空block
+      if (newState.columns[source.droppableId].taskIds.length === 0) {
+        delete newState.columns[source.droppableId];
+        // newState.columnOrder = newState.columnOrder.filter(
+        //   (x) => x !== source.droppableId
+        // );
+      }
+
+      setState((state) => newState);
     }
   };
   const mergeSteps = (source, destination) => {
     if (source.droppableId === destination.droppableId) return;
-    const sTaskIds = state.columns[source.droppableId].taskIds;
-    const dTaskIds = state.columns[destination.droppableId].taskIds;
+    const newState = {
+      ...state,
+    };
+    const sTaskIds = newState.columns[source.droppableId].taskIds;
+    const dTaskIds = newState.columns[destination.droppableId].taskIds;
     const index = destination.index;
     const ndTaskIds = dTaskIds
       .slice(0, index)
       .concat(sTaskIds, dTaskIds.slice(index));
-    state.columns[destination.droppableId].taskIds = ndTaskIds;
+    newState.columns[destination.droppableId].taskIds = ndTaskIds;
     //删除空Block
-    delete state.columns[source.droppableId];
-    state.columnOrder = state.columnOrder.filter(
-      (x) => x !== source.droppableId
-    );
+    delete newState.columns[source.droppableId];
+    // newState.columnOrder = newState.columnOrder.filter(
+    //   (x) => x !== source.droppableId
+    // );
     //保留空Block
     //state.columns[source.droppableId].taskIds=[]
-    const newState = {
-      ...state,
-    };
-    setState(newState);
+
+    setState((state) => newState);
   };
 
   return (
     <div className="App" ref={drop}>
-      {state.columnOrder.map((cid, cidx) => {
-        return (
+      {/* {state.columnOrder.map((cid, cidx) => { */}
+       { Object.keys(state.columns).map((cid, cidx) => {
+        const cond =
+          state.columns[cid] &&
+          state.columns[cid].taskIds &&
+          state.columns[cid].taskIds.length > 0;
+        return cond ? (
           <Block
             key={cid}
             id={cid}
@@ -152,7 +165,7 @@ function App() {
             tasks={state.tasks}
             moveStep={moveStep}
           />
-        );
+        ) : null;
       })}
       <CustomDragLayer snapToGrid={false} />
       {isOverCurrent && (
