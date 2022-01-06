@@ -1,0 +1,127 @@
+.Task {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 16px 16px 16px 22px;
+  width: 100%;
+  min-height: 54px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 217, 228);
+}
+.Task .left {
+  width: 16px;
+  height: 22px;
+  margin-right: 16px;
+  align-self: start;
+}
+.Task .left .icon {
+  box-sizing: content-box;
+  width: 18px;
+  height: 18px;
+  color: rgb(60, 105, 151);
+}
+.Task .labelSpan {
+  flex: 1 1 0%;
+  color: rgb(141, 162, 181);
+}
+.Task .labelSpan .label {
+  overflow: hidden;
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
+}
+.Task .port {
+  position: relative;
+  height: 54px;
+  width: 42px;
+  margin: -16px -16px -16px 0px;
+  padding-left: 12px;
+  align-self: center;
+  cursor: copy;
+}
+.Task .port .out {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 19px;
+  transform: translate(-50%, -50%);
+  box-sizing: content-box;
+  box-shadow: rgb(110 132 154) 0px 0px 0px 1px;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  background-color: rgb(110, 132, 154);
+  border: 4px solid white;
+}
+
+.innerShadow {
+  box-shadow: 0px 0px 5px #033d6c inset;
+}
+/* css patterns */
+.linear-blue-green {
+  background: linear-gradient(33deg, #5193ff, #72f9c1);
+}
+.diagonal {
+  background-color: #f4f8ff;
+  opacity: 0.8;
+  background-size: 8px 8px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #73808c 0,
+    #73808c 0.8px,
+    #f4f8ff 0,
+    #f4f8ff 50%
+  );
+}
+.rectangles {
+  background-color: #f4f8ff;
+  opacity: 0.8;
+  background-image: repeating-linear-gradient(
+      45deg,
+      #73808c 25%,
+      transparent 25%,
+      transparent 75%,
+      #73808c 75%,
+      #73808c
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #73808c 25%,
+      #f4f8ff 25%,
+      #f4f8ff 75%,
+      #73808c 75%,
+      #73808c
+    );
+  background-position: 0 0, 6px 6px;
+  background-size: 12px 12px;
+}
+.boxes{
+  background-color: #f4f8ff;
+opacity: 0.8;
+background-image:  linear-gradient(#73808c 0.9px, transparent 0.9px), linear-gradient(to right, #73808c 0.9px, #f4f8ff 0.9px);
+background-size: 18px 18px;
+}
+.cross {
+  background-color: #f4f8ff;
+  opacity: 0.8;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #f4f8ff 20%,
+      #f4f8ff 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #f4f8ff 20%,
+        #f4f8ff 80%,
+        transparent 80%,
+        transparent
+      )
+      12px 12px,
+    linear-gradient(#73808c 1px, transparent 1px) 0 -0.5px,
+    linear-gradient(90deg, #73808c 1px, #f4f8ff 1px) -0.5px 0;
+  background-size: 25px 25px, 25px 25px, 12px 12px, 12px 12px;
+}
