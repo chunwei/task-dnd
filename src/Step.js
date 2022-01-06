@@ -11,7 +11,7 @@ import { ItemTypes } from './DnDConstants';
 import './Task.css';
 
 const Step = forwardRef(function Step(
-  { task, isDragging, dragPreview, connectDragSource, connectDropTarget },
+  { id,task, isDragging, dragPreview, connectDragSource, connectDropTarget },
   ref
 ) {
   const elementRef = useRef(null);
@@ -31,7 +31,7 @@ const Step = forwardRef(function Step(
   //   setOpacity(isDragging ? 0.3 : 1)
   // },[isDragging])
   return (
-    <div ref={elementRef} className={TaskClass}/*  style={{ background,boxShadow }} */>
+    <div id={id} ref={elementRef} className={TaskClass}/*  style={{ background,boxShadow }} */>
       {isDragging ? null : (
         <>
           <div className="left">

@@ -15,22 +15,23 @@ function getStyles(left, top, isDragging) {
     WebkitTransform: transform,
     // IE fallback: hide the real node using CSS when dragging
     // because IE will ignore our custom "empty image" drag preview.
-    opacity: isDragging ? 0 : 1,
+    opacity: isDragging ? 0.3 : 1,
     // height: isDragging ? 0 : 'auto',
   };
 }
 const Block = ({ index, column, tasks, moveStep }) => {
   const { x: left, y: top, id } = column;
-  const iids=['iid-'+column.id/* +new Date().getTime() */].concat(column.taskIds.map(id=>'iid-'+id))
+  const iids=['iid-'+column.id].concat(column.taskIds.map(id=>'iid-'+id))
+  //useEffect(()=>{iids=['iid-'+column.id].concat(column.taskIds.map(id=>'iid-'+id))},[])
   const placeholderRef=useRef('x')
   const [placeholderId, setPlaceholderId] = useState(placeholderRef.current);
   const ref = useRef();
   //console.log( `Block re-render %c(${id}), ${left},${top},${placeholderId}`,'color:red')
-  const [{ isOver,sourceItem }, drop] = useDrop(() => ({
+  //console.log('iids ',iids)
+  const [{ isOver,isOverCurrent,sourceItem }, drop] = useDrop(() => ({
     accept: [ItemTypes.STEP, ItemTypes.BLOCK], //TODO handle Block hover
     hover: (item, monitor, component) => {
       //注意：item === monitor.getItem()
-      const isOverCurrent = monitor.isOver({ shallow: true });
       //if (!isOverCurrent) return;
       if (id === item.id) return; //hover itself
       if (!ref) return;
@@ -43,16 +44,9 @@ const Block = ({ index, column, tasks, moveStep }) => {
         //node, // target item dom
         //ref
       ); */
-      // Determine rectangle on screen
-      // const hoverBoundingRect = node.getBoundingClientRect();
-      // Get vertical middle
-      // const hoverMiddleY =
-      //   (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+
       // Determine mouse position
       const clientOffset = monitor.getClientOffset();
-      // Get pixels to the top
-      // const hoverClientY = clientOffset.y - hoverBoundingRect.top;
-      // const hoverClientX = clientOffset.x - hoverBoundingRect.left;
       
       const possibles=node.querySelectorAll('.'+IndicatorType.PossibleMove)
       const opened=node.querySelector('.'+IndicatorType.Placeholder)
@@ -73,30 +67,6 @@ const Block = ({ index, column, tasks, moveStep }) => {
       })
       const newplaceholderId=(!!found)?found.id:'x'
 
-      // const itemType = monitor.getItemType();
-/*       const indexOfId=iids.findIndex(iid=>iid=='iid-'+item.id)
-      let niids=[]
-      if(indexOfId>-1){
-        niids=iids.filter((iid,i)=>![indexOfId-1, indexOfId,indexOfId+1 ].includes(i))
-      }else{
-        niids=[...iids]
-      }
-      let newplaceholderId=niids.filter(iid=>iid!=placeholderRef.current)
-      .find((iid,idx)=>{
-        const iddom=node.querySelector('#'+iid+'.'+IndicatorType.PossibleMove)
-        if(!iddom)return false
-        const idRect = iddom.getBoundingClientRect();
-        if(idRect.bottom===0&&idRect.height==0)return false
-        const upBound = idRect.top - clientOffset.y;
-        const lowBound = clientOffset.y - idRect.bottom;
-        console.log(`${iid} up ${upBound}=(t ${idRect.top} - y ${clientOffset.y}), low ${lowBound}=(y ${clientOffset.y} - b ${idRect.bottom})`);
-        if((upBound<30 && upBound>=0)
-          ||(lowBound<30 && lowBound>=0)
-          ||(idRect.top<=clientOffset.y&&clientOffset.y<=idRect.bottom))
-          return true
-        return false
-      }) */
-
       //console.log(`%cp & np (${placeholderRef.current}) & ${newplaceholderId} `,'color:blue')
       if(newplaceholderId!==placeholderRef.current)
       {
@@ -112,7 +82,10 @@ const Block = ({ index, column, tasks, moveStep }) => {
         delta = monitor.getDropResult().delta;
       }
       const itemType=monitor.getItemType()
+      const iids=['iid-'+column.id].concat(column.taskIds.map(id=>'iid-'+id))
       const dIndex=iids.findIndex(iid=>iid===placeholderRef.current)
+      //console.log(`%cpref , pid (${placeholderRef.current}) => ${placeholderId} `,'color:red')
+      //console.log(dIndex, iids)
       if (itemType === ItemTypes.STEP) {
         const sDroppableId=item.pid
         // 当type是Block时source.index用不上
@@ -135,6 +108,7 @@ const Block = ({ index, column, tasks, moveStep }) => {
     },
     collect: (monitor) => ({
       isOver: monitor.isOver(),
+      isOverCurrent:monitor.isOver({shallow:true}),
       sourceItem:monitor.getItem()
     }),
   }));
@@ -157,11 +131,15 @@ const Block = ({ index, column, tasks, moveStep }) => {
   useEffect(() => {
     dragPreview(getEmptyImage(), { captureDraggingState: true });
   }, []);
+  useEffect(()=>{
+    if(!isOverCurrent)setPlaceholderId(x=>'x')
+  },[isOverCurrent])
   const isPossibleMove=(indicatorId)=>{
     if(sourceItem.id===id)return false;
     if(!!sourceItem.pid){//拖动的是STEP
       if(sourceItem.pid===id){//同一个block内
         //排除拖动中的元素及其前面的元素
+        const iids=['iid-'+column.id].concat(column.taskIds.map(id=>'iid-'+id))
         const indexOfId=iids.findIndex(iid=>iid ==='iid-'+sourceItem.id)
         if(indicatorId===iids[indexOfId])return false;
         if(indicatorId===iids[indexOfId-1])return false;
