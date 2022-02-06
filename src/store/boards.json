@@ -1,0 +1,14 @@
+{
+  "boards": [
+    {
+      "name": "Default List",
+      "board_id": "ckei4hzx300033f5rrqrn5xc1",
+      "projects": ["61d64afc3c6360001b582d22", "5f45db0ad085a020c21e7159"]
+    },
+    {
+      "name": "New List",
+      "board_id": "ckxvd9a75000k395vht6ta8xy",
+      "projects": []
+    }
+  ]
+}

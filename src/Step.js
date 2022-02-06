@@ -1,38 +1,52 @@
 import {
+  memo,
   forwardRef,
   useImperativeHandle,
   useRef,
   useEffect,
   useState,
 } from 'react';
-import { DragSource, DropTarget } from 'react-dnd';
+import { useDrag } from 'react-dnd';
+import { useSelector, useDispatch } from 'react-redux';
+import { setShouldUpdateEdge, moveStepTo, updateNodeRect } from './store/flow';
 import { getEmptyImage } from 'react-dnd-html5-backend';
 import { ItemTypes } from './DnDConstants';
+import { getNodeRect } from './Utils';
 import './Task.css';
 
-const Step = forwardRef(function Step(
-  { id,task, isDragging, dragPreview, connectDragSource, connectDropTarget },
-  ref
-) {
-  const elementRef = useRef(null);
-  connectDragSource(elementRef);
-  connectDropTarget(elementRef);
-  const background = isDragging ? 'linear-gradient(33deg, #5193ff, #72f9c1)' : '#fff';
-  const boxShadow = isDragging ?'0px 0px 10px 0px #037ee1 inset':'none';
-  const TaskClass=isDragging ?"Task innerShadow diagonal":"Task"
-  //const [opacity, setOpacity] = useState(isDragging ? 0.3 : 1)
-  useImperativeHandle(ref, () => ({
-    getNode: () => elementRef.current,
-  }));
+const Step = ({ id, index, pid }) => {
+  const dispatch = useDispatch();
+  const content = useSelector((state) => state.flow.tasks[id].content);
+  const [{ isDragging }, drag, dragPreview] = useDrag(
+    () => ({
+      type: ItemTypes.STEP,
+      item: { id, index, pid },
+      isDragging: (monitor) => monitor.getItem().id === id,
+      /* end: ({ id }, monitor) => {
+        dispatch(moveStepTo({ id, left: 0, top: 0 }));
+      }, */
+      collect: (monitor) => ({
+        isDragging: monitor.isDragging(),
+      }),
+    }),
+    [id, index, pid]
+  );
+
   useEffect(() => {
     dragPreview(getEmptyImage(), { captureDraggingState: true });
   }, []);
-  // useEffect(()=>{
-  //   setOpacity(isDragging ? 0.3 : 1)
-  // },[isDragging])
+  /*   useEffect(() => {
+    dispatch(setShouldUpdateEdge());
+  }, [id]); */
+  useEffect(() => {
+    //console.log('step useEffect ', id, index);
+    dispatch(updateNodeRect({ id, rect: getNodeRect(id) }));
+  }, [index]);
+  const TaskClass = isDragging ? 'Task innerShadow diagonal' : 'Task'; //'Task dragging'
+  //console.log('step render ', id, index);
   return (
-    <div id={id} ref={elementRef} className={TaskClass}/*  style={{ background,boxShadow }} */>
-      {isDragging ? null : (
+    <div className="TaskItem">
+      <div id={id} ref={drag} className={TaskClass}>
         <>
           <div className="left">
             <span className="icon">
@@ -45,112 +59,15 @@ const Step = forwardRef(function Step(
             </span>
           </div>
           <span className="labelSpan">
-            <div className="label">{task.content}</div>
+            <div className="label">{content}</div>
           </span>
           <div className="port">
             <div className="out"></div>
           </div>
         </>
-      )}
+      </div>
     </div>
   );
-});
-export default DropTarget(
-  [ItemTypes.STEP, ItemTypes.BLOCK],
-  {
-    drop(props, monitor) {
-        if(monitor.getItemType()===ItemTypes.BLOCK){ 
-            const delta = monitor.getDifferenceFromInitialOffset();
-            return {delta}
-        }
-    },
-    hover(props, monitor, component) {
-      if(1)return
-      if (!component) {
-        return null;
-      }
-      // node = HTML Div element from imperative API
-      const node = component.getNode();
-      if (!node) {
-        return null;
-      }
-      // Determine rectangle on screen
-      const hoverBoundingRect = node.getBoundingClientRect();
-      // Get vertical middle
-      const hoverMiddleY =
-        (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
-      // Determine mouse position
-      const clientOffset = monitor.getClientOffset();
-      // Get pixels to the top
-      const hoverClientY = clientOffset.y - hoverBoundingRect.top;
+};
 
-      const itemType = monitor.getItemType();
-
-      if (itemType === ItemTypes.STEP) {
-        const dragIndex = monitor.getItem().index;
-        const hoverIndex = props.index;
-        // console.log('hover',dragIndex,hoverIndex,monitor.getItem(), node)
-        // Don't replace items with themselves
-        if (dragIndex === hoverIndex) {
-          return;
-        }
-
-        // Only perform the move when the mouse has crossed half of the items height
-        // When dragging downwards, only move when the cursor is below 50%
-        // When dragging upwards, only move when the cursor is above 50%
-        // Dragging downwards
-        if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
-          return;
-        }
-        // Dragging upwards
-        if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
-          return;
-        }
-        // Time to actually perform the action
-        props.moveStep(
-          itemType,
-          { index: dragIndex, droppableId: monitor.getItem().pid }, //source
-          { index: hoverIndex, droppableId: props.pid }
-        ); //destination
-        // Note: we're mutating the monitor item here!
-        // Generally it's better to avoid mutations,
-        // but it's good here for the sake of performance
-        // to avoid expensive index searches.
-        monitor.getItem().index = hoverIndex;
-        monitor.getItem().pid = props.pid;
-      } else if (itemType === ItemTypes.BLOCK) {
-        //TODO condition
-        // props.moveStep(itemType,
-        //     {index:-1,droppableId:monitor.getItem().id},
-        //     {index:hoverIndex,droppableId:props.pid})
-      }
-    },
-  },
-  (connect) => ({
-    connectDropTarget: connect.dropTarget(),
-  })
-)(
-  DragSource(
-    ItemTypes.STEP,
-    {
-      beginDrag: (props) => ({
-        id: props.task.id,
-        pid: props.pid,
-        index: props.index,
-        task: props.task,
-      }),
-      isDragging: (props, monitor) => {
-        // If your component gets unmounted while dragged
-        // (like a card in Kanban board dragged between lists)
-        // you can implement something like this to keep its
-        // appearance dragged:
-        return monitor.getItem().id === props.id;
-      },
-    },
-    (connect, monitor) => ({
-      connectDragSource: connect.dragSource(),
-      dragPreview: connect.dragPreview(),
-      isDragging: monitor.isDragging(),
-    })
-  )(Step)
-);
+export default memo(Step);

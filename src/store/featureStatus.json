@@ -1,0 +1,22 @@
+{
+  "account_page_redesign": { "isEnabled": false },
+  "atomic_actions": { "isEnabled": false },
+  "_template": { "isEnabled": false },
+  "asr_bypass": { "isEnabled": false },
+  "owner_role": { "isEnabled": false },
+  "topics_and_components": { "isEnabled": false },
+  "intercom_integration": { "isEnabled": true },
+  "google_create": { "isEnabled": false },
+  "nato_apco": { "isEnabled": false },
+  "capture_v2": { "isEnabled": false },
+  "realtime_connection": { "isEnabled": true },
+  "enterprise_trial": { "isEnabled": true },
+  "verification_bypass": { "isEnabled": false },
+  "dialogflow": { "isEnabled": true },
+  "wavenet_voices": { "isEnabled": false },
+  "motorola_sso": { "isEnabled": false },
+  "sentry_integration": { "isEnabled": true },
+  "private_cloud_config": { "isEnabled": true },
+  "DesktopAppDev": { "isEnabled": false },
+  "gadgets": { "isEnabled": false }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "_id": "5f45db0ad085a020c21e7159",
+    "name": "Haha Project",
+    "creatorID": 40923,
+    "teamID": "OoEKzmQnay",
+    "platformData": { "products": {} },
+    "members": [],
+    "devVersion": "5f45db0ad085a020c21e7155",
+    "privacy": "private",
+    "platform": "alexa",
+    "image": "",
+    "linkType": "STRAIGHT"
+  },
+  {
+    "_id": "61d64afc3c6360001b582d22",
+    "name": "Banking Assistant Chatbot (Advanced)",
+    "teamID": "OoEKzmQnay",
+    "devVersion": "61d64afce6b43f00068effed",
+    "platform": "chatbot",
+    "platformData": { "invocationName": "template project general" },
+    "members": [],
+    "linkType": "STRAIGHT",
+    "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1632160166768-mobility-bank-og-logo.png",
+    "_version": 1,
+    "creatorID": 40923
+  }
+]

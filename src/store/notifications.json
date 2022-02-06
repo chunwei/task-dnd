@@ -1,0 +1,75 @@
+{
+  "rows": [
+    {
+      "id": 889,
+      "type": "FEATURE",
+      "created": "2021-11-30T19:10:05.357Z",
+      "details": "Dialogflow ES integration, project versioning, auto-panning, new built-in entities and more [is now available](https://www.notion.so/voiceflow/Voiceflow-Changelog-b5e32e269b204106b5b51014cd049346#026b9a50a25449d1b9132528eb1f9ff7)",
+      "creator_id": null
+    },
+    {
+      "id": 567,
+      "type": "FEATURE",
+      "created": "2021-07-29T15:27:29.413Z",
+      "details": "Fully customizable Reprompts and more improvements [out now!](https://www.notion.so/voiceflow/Voiceflow-Changelog-b5e32e269b204106b5b51014cd049346#026b9a50a25449d1b9132528eb1f9ff7)",
+      "creator_id": null
+    },
+    {
+      "id": 525,
+      "type": "UPDATE",
+      "created": "2021-07-15T20:38:58.889Z",
+      "details": "A new project navigation launched today. [Take a tour!](https://www.notion.so/voiceflow/Voiceflow-Changelog-b5e32e269b204106b5b51014cd049346#026b9a50a25449d1b9132528eb1f9ff7)",
+      "creator_id": null
+    },
+    {
+      "id": 444,
+      "type": "FEATURE",
+      "created": "2021-05-21T17:02:47.821Z",
+      "details": "Rasa Export, GIFs and Chat Visual support, Markup is now free [and so much more](https://www.notion.so/voiceflow/Voiceflow-Changelog-b5e32e269b204106b5b51014cd049346#396ea476ffb74febb767758f7adbf6b8)",
+      "creator_id": null
+    },
+    {
+      "id": 417,
+      "type": "FEATURE",
+      "created": "2021-04-21T01:14:47.132Z",
+      "details": "Speak & Audio Step Variants, Line Styling, Prototype Customization, Custom Action Step [and more!](https://www.notion.so/voiceflow/Voiceflow-Changelog-b5e32e269b204106b5b51014cd049346#396ea476ffb74febb767758f7adbf6b8)",
+      "creator_id": null
+    },
+    {
+      "id": 388,
+      "type": "FEATURE",
+      "created": "2021-04-02T02:40:37.789Z",
+      "details": "Suggestion Chips, Interaction Model Export [and more in our latest updates](https://www.notion.so/voiceflow/Voiceflow-Changelog-b5e32e269b204106b5b51014cd049346#396ea476ffb74febb767758f7adbf6b8)",
+      "creator_id": null
+    },
+    {
+      "id": 286,
+      "type": "UPDATE",
+      "created": "2021-01-18T20:03:15.156Z",
+      "details": "PDF, PNG and .VF File Export now available on Starter Plans, plus many [improvements and fixes](https://www.notion.so/voiceflow/Voiceflow-Changelog-b5e32e269b204106b5b51014cd049346#396ea476ffb74febb767758f7adbf6b8)",
+      "creator_id": null
+    },
+    {
+      "id": 244,
+      "type": "UPDATE",
+      "created": "2020-11-23T20:39:08.161Z",
+      "details": "Updates to the Speak Step, Choice Step, Comments [and more](https://www.notion.so/voiceflow/Voiceflow-Changelog-b5e32e269b204106b5b51014cd049346#396ea476ffb74febb767758f7adbf6b8)",
+      "creator_id": null
+    },
+    {
+      "id": 173,
+      "type": "FEATURE",
+      "created": "2020-10-21T18:42:36.353Z",
+      "details": "Functionality and design improvements to the Prototype Test Tool [are out now](https://www.notion.so/voiceflow/Voiceflow-Changelog-b5e32e269b204106b5b51014cd049346#396ea476ffb74febb767758f7adbf6b8)",
+      "creator_id": null
+    },
+    {
+      "id": 161,
+      "type": "FEATURE",
+      "created": "2020-10-13T19:06:55.026Z",
+      "details": "More options for Canvas Navigation have been [introduced](https://www.notion.so/voiceflow/Voiceflow-Changelog-b5e32e269b204106b5b51014cd049346#396ea476ffb74febb767758f7adbf6b8)",
+      "creator_id": null
+    }
+  ],
+  "last_checked": "2021-12-29T13:40:39.578Z"
+}

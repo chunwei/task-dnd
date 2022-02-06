@@ -19,7 +19,7 @@ const initData = {
     },
     'column-2': {
       id: 'column-2',
-      x: 600,
+      x: 200,
       y: 290,
       title: 'Done',
       taskIds: ['task-4', 'task-5'],
@@ -33,29 +33,5 @@ const initData = {
     },
   },
   columnOrder: ['column-1', 'column-2', 'column-3'],
-  currentBlock: 'column-3',
-  edges: [
-    {
-      id: 'edge-1',
-      source: 'task-1',
-      target: 'task-4',
-      sourcePort: {},
-      targetPort: {},
-    },
-    {
-      id: 'edge-2',
-      source: 'task-5',
-      target: 'task-7',
-      sourcePort: {},
-      targetPort: {},
-    },
-    {
-      id: 'edge-3',
-      source: 'task-8',
-      target: 'task-3',
-      sourcePort: {},
-      targetPort: {},
-    },
-  ],
 };
 export default initData;

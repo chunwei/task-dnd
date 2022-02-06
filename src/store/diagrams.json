@@ -1,0 +1,3654 @@
+[
+  {
+    "_id": "61d64afce6b43f00068effee",
+    "offsetX": 245.4472800983202,
+    "offsetY": 391.59643989525455,
+    "zoom": 75.81574617959994,
+    "nodes": {
+      "start00000000000000000000": {
+        "nodeID": "start00000000000000000000",
+        "type": "start",
+        "coords": [-1046.9806467991307, -294.8240812751237],
+        "data": {
+          "name": "Start",
+          "color": "standard",
+          "steps": ["6148a9f730a1666a0b63d9a4", "6148ac3730a1666a0b63dcc4"],
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e6ea",
+              "id": "6032afcf359e8c14c06c0319",
+              "data": {
+                "points": [
+                  { "point": [-881.9805623689883, -214.82405611856817] },
+                  { "point": [-857.9805623689883, -214.82405611856817] },
+                  { "point": [-857.9805623689883, 17.175965320971784] },
+                  { "point": [-1042.6778772630948, 17.175965320971784] },
+                  {
+                    "toTop": true,
+                    "allowedToTop": true,
+                    "point": [-1042.6778772630948, 132.14428134691335]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e783": {
+        "nodeID": "6143bb93c51863d0c459e783",
+        "type": "exit",
+        "data": { "ports": [] }
+      },
+      "6143bb93c51863d0c459e77e": {
+        "nodeID": "6143bb93c51863d0c459e77e",
+        "type": "intent",
+        "data": {
+          "intent": "VF.NO",
+          "mappings": [],
+          "availability": "GLOBAL",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c6a630a1666a0b63e27b",
+              "id": "6143bb93c51863d0c459e77d"
+            }
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e77b": {
+        "nodeID": "6143bb93c51863d0c459e77b",
+        "type": "prompt",
+        "data": {
+          "ports": [
+            { "type": "else", "target": null, "id": "6143bb93c51863d0c459e77c" }
+          ],
+          "chips": null,
+          "buttons": [
+            {
+              "name": "Closest Branch",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            },
+            {
+              "name": "Transfer Money",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            },
+            {
+              "name": "Check My Balance",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            }
+          ],
+          "noReply": null,
+          "noMatches": {
+            "types": ["reprompt"],
+            "pathName": "No Match",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktst2xqy00b03g69ygrc469b",
+                "content": [
+                  {
+                    "children": [{ "text": "Could you please say that again?" }]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqy00b13g69j1g6bdnf",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Do you want to make a transfer, or see your spending history?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqy00b23g69kmdn0bgb",
+                "content": [
+                  { "children": [{ "text": "Please contact support." }] }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "6143bb93c51863d0c459e775": {
+        "nodeID": "6143bb93c51863d0c459e775",
+        "type": "prompt",
+        "data": {
+          "ports": [
+            { "type": "else", "target": null, "id": "6143bb93c51863d0c459e776" }
+          ],
+          "chips": null,
+          "buttons": [
+            {
+              "name": "Closest Branch",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            },
+            {
+              "name": "Transfer Money",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            },
+            {
+              "name": "Check My Balance",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            }
+          ],
+          "noReply": null,
+          "noMatches": {
+            "types": ["reprompt"],
+            "pathName": "No Match",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktst2xqy00b43g69b0p1w3rd",
+                "content": [
+                  {
+                    "children": [{ "text": "Could you please say that again?" }]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqy00b53g69pz9lnzeg",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Do you want to make a transfer, or see your spending history?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqy00b63g695ybpzk7f",
+                "content": [
+                  { "children": [{ "text": "Please contact support." }] }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "6143bb93c51863d0c459e76d": {
+        "nodeID": "6143bb93c51863d0c459e76d",
+        "type": "trace",
+        "data": {
+          "_v": 1,
+          "payload": { "name": "Payments API", "body": "" },
+          "defaultPath": 0,
+          "ports": [
+            {
+              "type": "",
+              "target": null,
+              "id": "6143bb93c51863d0c459e76e",
+              "data": { "event": { "type": "Success" } }
+            },
+            {
+              "type": "",
+              "target": null,
+              "id": "6143bb93c51863d0c459e76f",
+              "data": { "event": { "type": "Failure" } }
+            },
+            {
+              "type": "",
+              "target": null,
+              "id": "6143bb93c51863d0c459e770",
+              "data": { "event": { "type": "Pending" } }
+            }
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e76a": {
+        "nodeID": "6143bb93c51863d0c459e76a",
+        "type": "prompt",
+        "data": {
+          "ports": [
+            { "type": "else", "target": null, "id": "6143bb93c51863d0c459e76b" }
+          ],
+          "chips": null,
+          "buttons": [
+            {
+              "name": "Closest Branch",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            },
+            {
+              "name": "Transfer Money",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            },
+            {
+              "name": "Check My Balance",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            }
+          ],
+          "noReply": null,
+          "noMatches": {
+            "types": ["reprompt"],
+            "pathName": "No Match",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktst2xqz00b83g69qoxy4ww5",
+                "content": [
+                  {
+                    "children": [{ "text": "Could you please say that again?" }]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqz00b93g69soy4htnq",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Do you want to make a transfer, or see your spending history?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqz00ba3g69blsfwjxu",
+                "content": [
+                  { "children": [{ "text": "Please contact support." }] }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "6143bb93c51863d0c459e764": {
+        "nodeID": "6143bb93c51863d0c459e764",
+        "type": "text",
+        "data": {
+          "name": "",
+          "randomize": false,
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e75e",
+              "id": "6143bb93c51863d0c459e765",
+              "data": {
+                "points": [
+                  { "point": [3405.7191744134075, 673.0356536754664] },
+                  { "point": [3553.6613292095767, 673.4344789055863] }
+                ]
+              }
+            }
+          ],
+          "texts": [
+            {
+              "id": "irqx6j7",
+              "content": [{ "children": [{ "text": "Ok." }] }]
+            }
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e75e": {
+        "nodeID": "6143bb93c51863d0c459e75e",
+        "type": "visual",
+        "data": {
+          "name": "Visuals",
+          "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631807354053-cleanshot-2021-09-16-at-11.49.04.png",
+          "device": null,
+          "dimensions": { "width": 744, "height": 904 },
+          "visualType": "image",
+          "canvasVisibility": "cropped",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c6b930a1666a0b63e293",
+              "id": "6143bb93c51863d0c459e75f"
+            }
+          ],
+          "frameType": "AUTO"
+        }
+      },
+      "6143bb93c51863d0c459e75b": {
+        "nodeID": "6143bb93c51863d0c459e75b",
+        "type": "prompt",
+        "data": {
+          "ports": [
+            { "type": "else", "target": null, "id": "6143bb93c51863d0c459e75c" }
+          ],
+          "chips": null,
+          "buttons": [
+            {
+              "name": "Closest Branch",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            },
+            {
+              "name": "Transfer Money",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            },
+            {
+              "name": "Check My Balance",
+              "type": "INTENT",
+              "payload": { "intentID": null }
+            }
+          ],
+          "noReply": null,
+          "noMatches": {
+            "types": ["reprompt"],
+            "pathName": "No Match",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktst2xqz00be3g69i898bp8i",
+                "content": [
+                  {
+                    "children": [{ "text": "Could you please say that again?" }]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqz00bf3g69gh5500j2",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Do you want to make a transfer, or see your spending history?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqz00bg3g69ei5h6fkk",
+                "content": [
+                  { "children": [{ "text": "Please contact support." }] }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "6143bb93c51863d0c459e752": {
+        "nodeID": "6143bb93c51863d0c459e752",
+        "type": "prompt",
+        "data": {
+          "ports": [
+            { "type": "else", "target": null, "id": "6143bb93c51863d0c459e753" }
+          ],
+          "chips": null,
+          "buttons": [
+            {
+              "name": "Closest Branch",
+              "type": "INTENT",
+              "payload": { "intentID": "nfji3aqy" }
+            },
+            {
+              "name": "Transfer Money",
+              "type": "INTENT",
+              "payload": { "intentID": "wd931gl" }
+            },
+            {
+              "name": "Check My Balance",
+              "type": "INTENT",
+              "payload": { "intentID": "rck63agx" }
+            }
+          ],
+          "noReply": null,
+          "noMatches": {
+            "types": ["reprompt"],
+            "pathName": "No Match",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktst2xqz00bj3g69g8pwt8r4",
+                "content": [
+                  {
+                    "children": [{ "text": "Could you please say that again?" }]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqz00bk3g69bwxcuv72",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Do you want to make a transfer, or see your spending history?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqz00bl3g69wvh9ma65",
+                "content": [
+                  { "children": [{ "text": "Please contact support." }] }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "6143bb93c51863d0c459e749": {
+        "nodeID": "6143bb93c51863d0c459e749",
+        "type": "visual",
+        "data": {
+          "name": "Visuals",
+          "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631807050315-cleanshot-2021-09-16-at-11.43.09.png",
+          "device": null,
+          "dimensions": { "width": 736, "height": 938 },
+          "visualType": "image",
+          "canvasVisibility": "cropped",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c68330a1666a0b63e261",
+              "id": "6143bb93c51863d0c459e74a"
+            }
+          ],
+          "frameType": "AUTO"
+        }
+      },
+      "6143bb93c51863d0c459e743": {
+        "nodeID": "6143bb93c51863d0c459e743",
+        "type": "prompt",
+        "data": {
+          "ports": [
+            { "type": "else", "target": null, "id": "6143bb93c51863d0c459e744" }
+          ],
+          "chips": null,
+          "buttons": null,
+          "noReply": null,
+          "noMatches": {
+            "types": ["reprompt"],
+            "pathName": "No Match",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktst2xqz00bp3g69nhcssd5e",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "I didn't quite catch that. What else can I help you with today? "
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "6143bb93c51863d0c459e73d": {
+        "nodeID": "6143bb93c51863d0c459e73d",
+        "type": "visual",
+        "data": {
+          "name": "Visuals",
+          "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631806461170-cleanshot-2021-09-16-at-11.34.08.png",
+          "device": null,
+          "dimensions": { "width": 340, "height": 356 },
+          "visualType": "image",
+          "canvasVisibility": "full",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c61730a1666a0b63e210",
+              "id": "6143bb93c51863d0c459e73e"
+            }
+          ],
+          "frameType": "AUTO"
+        }
+      },
+      "6143bb93c51863d0c459e737": {
+        "nodeID": "6143bb93c51863d0c459e737",
+        "type": "prompt",
+        "data": {
+          "ports": [
+            { "type": "else", "target": null, "id": "6143bb93c51863d0c459e738" }
+          ],
+          "chips": null,
+          "buttons": [
+            {
+              "name": "Whats My Balance",
+              "type": "INTENT",
+              "payload": { "intentID": "rck63agx" }
+            },
+            {
+              "name": "Check My Spending History",
+              "type": "INTENT",
+              "payload": { "intentID": "gy2031mb" }
+            },
+            {
+              "name": "Transfer Money",
+              "type": "INTENT",
+              "payload": { "intentID": "wd931gl" }
+            }
+          ],
+          "noReply": null,
+          "noMatches": {
+            "types": ["reprompt"],
+            "pathName": "No Match",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktst2xqz00bs3g69ff1u87p3",
+                "content": [
+                  {
+                    "children": [{ "text": "Could you please say that again?" }]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqz00bt3g69bgtnq9ce",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Do you want to make a transfer, or see your spending history?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "cktst2xqz00bu3g69bnnq5tii",
+                "content": [
+                  { "children": [{ "text": "Please contact support." }] }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "6143bb93c51863d0c459e72c": {
+        "nodeID": "6143bb93c51863d0c459e72c",
+        "type": "trace",
+        "data": {
+          "_v": 1,
+          "payload": { "name": "Payments API", "body": "" },
+          "defaultPath": 0,
+          "ports": [
+            {
+              "type": "",
+              "target": "6148c51930a1666a0b63e0f8",
+              "id": "6143bb93c51863d0c459e72d",
+              "data": { "event": { "type": "Success" } }
+            },
+            {
+              "type": "",
+              "target": "6148c51930a1666a0b63e0f8",
+              "id": "6143bb93c51863d0c459e72e",
+              "data": { "event": { "type": "Failure" } }
+            },
+            {
+              "type": "",
+              "target": "6148c51930a1666a0b63e0f8",
+              "id": "6143bb93c51863d0c459e72f",
+              "data": { "event": { "type": "Pending" } }
+            }
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e727": {
+        "nodeID": "6143bb93c51863d0c459e727",
+        "type": "buttons",
+        "data": {
+          "else": {
+            "types": ["reprompt"],
+            "pathName": "No Match",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktst2xqz00c13g69djrc7cie",
+                "content": [{ "children": [{ "text": "" }] }]
+              }
+            ]
+          },
+          "buttons": [
+            {
+              "id": "isrx6qa",
+              "name": "Yes",
+              "actions": ["INTENT", "PATH"],
+              "intent": "VF.YES"
+            },
+            {
+              "id": "issx6ap",
+              "name": "No",
+              "actions": ["INTENT", "PATH"],
+              "intent": "VF.NO"
+            }
+          ],
+          "noReply": null,
+          "ports": [
+            {
+              "type": "else",
+              "target": null,
+              "id": "6143bb93c51863d0c459e728"
+            },
+            {
+              "type": 2,
+              "target": "6143bb93c51863d0c459e6f6",
+              "id": "6143bb93c51863d0c459e729",
+              "data": {
+                "points": [
+                  { "point": [3414.281046170024, 333.1169458129868] },
+                  { "point": [3484.478292615873, 333.1169458129868] },
+                  { "point": [3484.478292615873, 625.4420610119658] },
+                  {
+                    "allowedToTop": true,
+                    "point": [3554.675539061722, 625.4420610119658]
+                  }
+                ],
+                "color": "#00b76d",
+                "caption": { "value": "Yes", "width": 34, "height": 24 }
+              }
+            },
+            {
+              "type": 3,
+              "target": "6143bb93c51863d0c459e6f8",
+              "id": "6143bb93c51863d0c459e72a",
+              "data": {
+                "points": [
+                  {
+                    "reversed": true,
+                    "point": [3084.2984467936235, 387.3355014538822]
+                  },
+                  { "point": [3060.2984467936235, 387.3355014538822] },
+                  { "point": [3060.2984467936235, 489.6846507614042] },
+                  { "point": [3240.7038087195065, 489.6846507614042] },
+                  {
+                    "toTop": true,
+                    "allowedToTop": true,
+                    "point": [3240.7038087195065, 592.0338000689262]
+                  }
+                ],
+                "color": "#f83f55",
+                "caption": { "value": "No", "width": 30, "height": 24 }
+              }
+            }
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e71b": {
+        "nodeID": "6143bb93c51863d0c459e71b",
+        "type": "buttons",
+        "data": {
+          "else": {
+            "types": ["reprompt"],
+            "pathName": "No Match",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktst2xqz00c83g69hiy01uv3",
+                "content": [{ "children": [{ "text": "" }] }]
+              }
+            ]
+          },
+          "buttons": [
+            {
+              "id": "istx6mf",
+              "name": "Spending Category",
+              "actions": ["INTENT", "PATH"],
+              "intent": "or1331gw"
+            },
+            {
+              "id": "isux6j5",
+              "name": "Yes",
+              "actions": ["INTENT", "PATH"],
+              "intent": "VF.YES"
+            },
+            {
+              "id": "isvx6ni",
+              "name": "No",
+              "actions": ["INTENT", "PATH"],
+              "intent": "VF.NO"
+            }
+          ],
+          "noReply": null,
+          "ports": [
+            {
+              "type": "else",
+              "target": null,
+              "id": "6143bb93c51863d0c459e71c"
+            },
+            {
+              "type": "",
+              "target": "6143bb93c51863d0c459e6e8",
+              "id": "6143bb93c51863d0c459e71d",
+              "data": {
+                "points": [
+                  { "point": [2889.533245873612, 284.34381835353616] },
+                  { "point": [2986.9083741645927, 284.34381835353616] },
+                  { "point": [2986.9083741645927, 94.1162082212383] },
+                  {
+                    "allowedToTop": true,
+                    "point": [3084.283502455573, 94.1162082212383]
+                  }
+                ],
+                "color": "#ff7043"
+              }
+            },
+            {
+              "type": 3,
+              "target": "6143bb93c51863d0c459e6f0",
+              "id": "6143bb93c51863d0c459e71e",
+              "data": {
+                "points": [
+                  {
+                    "reversed": true,
+                    "point": [2559.533245873612, 338.37927722627387]
+                  },
+                  { "point": [2510.5573467143386, 338.37927722627387] },
+                  { "point": [2510.5573467143386, 638.5811569521205] },
+                  {
+                    "reversed": true,
+                    "allowedToTop": true,
+                    "point": [2461.581447555065, 638.5811569521205]
+                  }
+                ],
+                "color": "#00b76d",
+                "caption": { "value": "Yes", "width": 34, "height": 24 }
+              }
+            },
+            {
+              "type": 2,
+              "target": "6143bb93c51863d0c459e6f4",
+              "id": "6143bb93c51863d0c459e71f",
+              "data": {
+                "points": [
+                  { "point": [2889.533245873612, 392.41468808740564] },
+                  { "point": [2913.533245873612, 392.41468808740564] },
+                  { "point": [2913.533245873612, 497.1640207421764] },
+                  { "point": [2771.5027277903746, 497.1640207421764] },
+                  {
+                    "toTop": true,
+                    "allowedToTop": true,
+                    "point": [2771.5027277903746, 601.9133533969472]
+                  }
+                ],
+                "color": "#f83f55",
+                "caption": { "value": "No", "width": 30, "height": 24 }
+              }
+            }
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e70f": {
+        "nodeID": "6143bb93c51863d0c459e70f",
+        "type": "buttons",
+        "data": {
+          "else": {
+            "types": ["reprompt"],
+            "pathName": "Connect to an agent",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktst2xr000ch3g694w2wffoe",
+                "content": [{ "children": [{ "text": "Can I send this?" }] }]
+              },
+              {
+                "id": "cktst2xr000ci3g69rsbfwjeb",
+                "content": [
+                  { "children": [{ "text": "Please confirm your transfer." }] }
+                ]
+              }
+            ]
+          },
+          "buttons": [
+            {
+              "id": "iswx6km",
+              "name": "Edit my transfer",
+              "actions": ["PATH", "INTENT"],
+              "intent": "v69131d2"
+            },
+            {
+              "id": "isxx63x",
+              "name": "Cancel",
+              "actions": ["INTENT", "PATH"],
+              "intent": "VF.CANCEL"
+            },
+            {
+              "id": "isyx6nm",
+              "name": "Yes",
+              "actions": ["INTENT", "PATH"],
+              "intent": "VF.YES"
+            }
+          ],
+          "noReply": null,
+          "ports": [
+            {
+              "type": "else",
+              "target": null,
+              "id": "6143bb93c51863d0c459e710"
+            },
+            {
+              "type": 3,
+              "target": "6148c56f30a1666a0b63e10c",
+              "id": "6143bb93c51863d0c459e711",
+              "data": {
+                "points": [
+                  { "point": [771.5799026139082, -13.96770225212805] },
+                  {
+                    "locked": true,
+                    "point": [929.2469302326979, -13.96770225212805]
+                  },
+                  {
+                    "locked": true,
+                    "point": [929.2469302326979, -121.09126792595617]
+                  },
+                  {
+                    "reversed": true,
+                    "point": [770.5478973038496, -121.09126792595617]
+                  }
+                ],
+                "color": "#ff7043",
+                "caption": {
+                  "value": "Edit Transfer",
+                  "width": 98,
+                  "height": 24
+                }
+              }
+            },
+            {
+              "type": 2,
+              "target": "6143bb93c51863d0c459e6ee",
+              "id": "6143bb93c51863d0c459e712",
+              "data": {
+                "points": [
+                  { "point": [771.5621970803787, 76.89619719756496] },
+                  { "point": [956.6949372094921, 76.89619719756496] },
+                  {
+                    "point": [956.6949372094921, 218.12485444606634],
+                    "toTop": true,
+                    "allowedToTop": true
+                  }
+                ],
+                "color": "#f83f55",
+                "caption": {
+                  "value": "Cancel Transfer",
+                  "width": 117,
+                  "height": 24
+                }
+              }
+            },
+            {
+              "type": "",
+              "target": "6143bb93c51863d0c459e6ec",
+              "id": "6143bb93c51863d0c459e713",
+              "data": {
+                "caption": {
+                  "value": "Send Transfer",
+                  "width": 106,
+                  "height": 24
+                },
+                "color": "#00b76d",
+                "points": [
+                  {
+                    "reversed": true,
+                    "point": [441.5621252072483, 93.8961717219029]
+                  },
+                  { "point": [287.66173492062825, 93.8961717219029] },
+                  {
+                    "toTop": true,
+                    "allowedToTop": true,
+                    "point": [287.66173492062825, 229.16563631946434]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e706": {
+        "nodeID": "6143bb93c51863d0c459e706",
+        "type": "ifV2",
+        "data": {
+          "expressions": [
+            {
+              "type": null,
+              "name": "User did not say a category",
+              "value": [
+                {
+                  "logicInterface": "variable",
+                  "type": "equals",
+                  "value": [
+                    { "type": "variable", "value": "category" },
+                    { "type": "value", "value": "0" }
+                  ]
+                }
+              ]
+            }
+          ],
+          "noMatch": { "type": "path", "pathName": "User said a category" },
+          "ports": [
+            {
+              "type": "else",
+              "target": "6143bb93c51863d0c459e6e8",
+              "id": "6143bb93c51863d0c459e707",
+              "data": {
+                "caption": {
+                  "value": "Yes Category",
+                  "width": 99,
+                  "height": 24
+                },
+                "color": "#5271ff",
+                "points": [
+                  { "point": [3147.9391976252928, -71.92612017201492] },
+                  { "point": [3249.280959398544, -71.92612017201492] },
+                  {
+                    "toTop": true,
+                    "allowedToTop": true,
+                    "point": [3249.280959398544, 62.11696059440236]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "",
+              "target": "6143bb93c51863d0c459e6e6",
+              "id": "6143bb93c51863d0c459e708",
+              "data": {
+                "points": [
+                  {
+                    "reversed": true,
+                    "point": [2817.9391976252928, -126.9261268720773]
+                  },
+                  { "point": [2724.5155567184984, -126.9261268720773] },
+                  {
+                    "toTop": true,
+                    "allowedToTop": true,
+                    "point": [2724.5155567184984, 57.25500782839235]
+                  }
+                ],
+                "caption": {
+                  "value": "No Category",
+                  "width": 95,
+                  "height": 24
+                },
+                "color": "#5271ff",
+                "event": { "type": "User did not say a category" }
+              }
+            }
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e704": {
+        "nodeID": "6143bb93c51863d0c459e704",
+        "type": "intent",
+        "data": {
+          "intent": "gy2031mb",
+          "mappings": [],
+          "availability": "GLOBAL",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e706",
+              "id": "6143bb93c51863d0c459e703"
+            }
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e7b1": {
+        "nodeID": "6143bb93c51863d0c459e7b1",
+        "type": "markup_text",
+        "coords": [2074.447489101426, 1672.945066509384],
+        "data": {
+          "name": "",
+          "scale": 1,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "This template provides static numbers (account spending, account balance, etc.) in the abscence of an API. Connect your own custom APIs to simulate a 1:1 experience and collect real banking data from your customers.  "
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 602.9268738169759,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7b0": {
+        "nodeID": "6143bb93c51863d0c459e7b0",
+        "type": "markup_text",
+        "coords": [2230.5432875779225, 1610.7120781738172],
+        "data": {
+          "name": "",
+          "scale": 1.1457089280290604,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Integrate APIs into your experience",
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 458.8423170460445,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7af": {
+        "nodeID": "6143bb93c51863d0c459e7af",
+        "type": "markup_image",
+        "coords": [2036.5426979547929, 1581.6777463564324],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631768907530-pro-tip-box-left.png",
+          "width": 652,
+          "height": 247,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7ae": {
+        "nodeID": "6143bb93c51863d0c459e7ae",
+        "type": "markup_image",
+        "coords": [4062.6311658888976, 1326.3541889515293],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631767083642-mood--title-bonus.png",
+          "width": 762.6833953090905,
+          "height": 177.95945890545445,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7ad": {
+        "nodeID": "6143bb93c51863d0c459e7ad",
+        "type": "markup_text",
+        "coords": [112.89918346510046, 1134.779946208432],
+        "data": {
+          "name": "",
+          "scale": 1,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "The Banking Assistant Chatbot template uses " },
+                { "text": "required", "fontWeight": "700" },
+                { "text": " " },
+                { "text": "entities", "fontWeight": "700" },
+                {
+                  "text": " - which require the user to enter a specific piece of information in order to proceed. "
+                }
+              ]
+            },
+            { "textAlign": "left", "children": [{ "text": "" }] },
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "This means that our chatbot will continue to ask the user (response utterance) for that information until it's provided."
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 602.4489091615079,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7ac": {
+        "nodeID": "6143bb93c51863d0c459e7ac",
+        "type": "markup_image",
+        "coords": [781.88981575688, 1112.6512955933877],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631741848578-cleanshot-2021-09-15-at-17.37.17.png",
+          "width": 471.3409966304729,
+          "height": 779.0436738327584,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e702": {
+        "nodeID": "6143bb93c51863d0c459e702",
+        "type": "block",
+        "coords": [3039.4572818301795, 1150.4842388473476],
+        "data": {
+          "name": "Exit Block",
+          "color": "red",
+          "steps": [
+            "6143bb93c51863d0c459e77e",
+            "6148c6a630a1666a0b63e27b",
+            "6143bb93c51863d0c459e783"
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e700": {
+        "nodeID": "6143bb93c51863d0c459e700",
+        "type": "block",
+        "coords": [2296.838410637295, 1069.521562239447],
+        "data": {
+          "name": "Prompt",
+          "color": "green",
+          "steps": ["6148c69d30a1666a0b63e26f", "6143bb93c51863d0c459e77b"]
+        }
+      },
+      "6143bb93c51863d0c459e7ab": {
+        "nodeID": "6143bb93c51863d0c459e7ab",
+        "type": "markup_image",
+        "coords": [4061.1262248863536, 1070.221930472716],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631766504545-mood--title-17-1.png",
+          "width": 540.3791580332194,
+          "height": 206.59045220227344,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7aa": {
+        "nodeID": "6143bb93c51863d0c459e7aa",
+        "type": "markup_text",
+        "coords": [245.80230217818405, 1048.542824821733],
+        "data": {
+          "name": "",
+          "scale": 1.1442571662897087,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "center",
+              "children": [{ "text": "Required Entities", "fontWeight": "700" }]
+            }
+          ],
+          "overrideWidth": 193,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7a9": {
+        "nodeID": "6143bb93c51863d0c459e7a9",
+        "type": "markup_image",
+        "coords": [68.51101588143763, 1018.702856309772],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631741977769-pro-tip-box-left.png",
+          "width": 652,
+          "height": 351,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7a8": {
+        "nodeID": "6143bb93c51863d0c459e7a8",
+        "type": "markup_text",
+        "coords": [790.7493156891813, 1020.3802044468803],
+        "data": {
+          "name": "",
+          "scale": 1,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "center",
+              "children": [{ "text": "FIGURE 1.2", "fontWeight": "700" }]
+            }
+          ],
+          "overrideWidth": 130,
+          "backgroundColor": { "r": 79, "g": 158, "b": 209, "a": 0.25 },
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e6fe": {
+        "nodeID": "6143bb93c51863d0c459e6fe",
+        "type": "block",
+        "coords": [3724.939205771026, 1075.1328414131515],
+        "data": {
+          "name": "Prompt",
+          "color": "green",
+          "steps": ["6148c6e130a1666a0b63e2a1", "6143bb93c51863d0c459e775"]
+        }
+      },
+      "6143bb93c51863d0c459e7a7": {
+        "nodeID": "6143bb93c51863d0c459e7a7",
+        "type": "markup_text",
+        "coords": [-2832.170439188345, 79.19637843724485],
+        "data": {
+          "name": "",
+          "scale": 1,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "center",
+              "children": [
+                { "text": "FIGURE 1.1: Example", "fontWeight": "700" }
+              ]
+            }
+          ],
+          "overrideWidth": 241.38365967941195,
+          "backgroundColor": { "r": 79, "g": 158, "b": 209, "a": 0.25 },
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7a6": {
+        "nodeID": "6143bb93c51863d0c459e7a6",
+        "type": "markup_text",
+        "coords": [1414.0712342736238, 837.2682488509954],
+        "data": {
+          "name": "",
+          "scale": 1,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Using images helps to visualize the conversation and "
+                }
+              ]
+            },
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "draws attention to important information, such as your account balance or spending history"
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 523,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7a5": {
+        "nodeID": "6143bb93c51863d0c459e7a5",
+        "type": "markup_image",
+        "coords": [-109.71246906885324, 736.7918195887005],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631758658478-untitled_artwork-6-2.png",
+          "width": 166.73701955602345,
+          "height": 144.29165153886646,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7a4": {
+        "nodeID": "6143bb93c51863d0c459e7a4",
+        "type": "markup_image",
+        "coords": [-2554.1736415472246, -1016.4920462773741],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631649594709-rectangle-2.png",
+          "width": 5.499999999999904,
+          "height": 105.72222222222038,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7a3": {
+        "nodeID": "6143bb93c51863d0c459e7a3",
+        "type": "markup_image",
+        "coords": [-2838.3676679953915, -1090.9401455499114],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631648762152-mobility-bank-logo.png",
+          "width": 249.7894736842124,
+          "height": 249.7894736842124,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e6fc": {
+        "nodeID": "6143bb93c51863d0c459e6fc",
+        "type": "block",
+        "coords": [-2631.9554768512803, 195.77590076694622],
+        "data": {
+          "name": "Custom Action Step",
+          "color": "purple",
+          "steps": ["6143bb93c51863d0c459e76d"]
+        }
+      },
+      "6143bb93c51863d0c459e6fa": {
+        "nodeID": "6143bb93c51863d0c459e6fa",
+        "type": "block",
+        "coords": [3035.6716807450957, 906.3376351059854],
+        "data": {
+          "name": "Prompt",
+          "color": "green",
+          "steps": ["6148c6b030a1666a0b63e287", "6143bb93c51863d0c459e76a"]
+        }
+      },
+      "6143bb93c51863d0c459e7a2": {
+        "nodeID": "6143bb93c51863d0c459e7a2",
+        "type": "markup_image",
+        "coords": [1419.7347982234523, 626.293387539512],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631767118827-mood--title-18-1.png",
+          "width": 570.5568672121478,
+          "height": 209.11404927838592,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7a1": {
+        "nodeID": "6143bb93c51863d0c459e7a1",
+        "type": "markup_image",
+        "coords": [-555.5953220366893, 694.7662174474988],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631758614162-mood--title-9-1.png",
+          "width": 579.3698940556095,
+          "height": 282.14337872845914,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e7a0": {
+        "nodeID": "6143bb93c51863d0c459e7a0",
+        "type": "markup_text",
+        "coords": [-1803.7722623187033, 587.182137651314],
+        "data": {
+          "name": "",
+          "scale": 1.0269107537992284,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Create no match options and custom buttoms to help guide the user towards a selection. Once the user matches an intent, it will re-direct the user to that specific intent (folder) and will begin following that respective path."
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 480.6642103337048,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e79f": {
+        "nodeID": "6143bb93c51863d0c459e79f",
+        "type": "markup_image",
+        "coords": [-2841.6927460626603, 150.38434234989128],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631731201539-sm-resources.png",
+          "width": 883.6481742599383,
+          "height": 512.7484800639904,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e79e": {
+        "nodeID": "6143bb93c51863d0c459e79e",
+        "type": "markup_image",
+        "coords": [-2852.865722155577, -285.834890186746],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631718845185-sm-resources-1.png",
+          "width": 709.5617434275235,
+          "height": 298.8760070800781,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e79d": {
+        "nodeID": "6143bb93c51863d0c459e79d",
+        "type": "markup_text",
+        "coords": [-2850.8521730830753, -686.7616147969859],
+        "data": {
+          "name": "",
+          "scale": 1,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Need a starting point for your next chatbot? ",
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "The Banking Assistant Chatbot template is a great scalable design that can handle a diverse range of customer inquiries while directing the user to a series of answers."
+                }
+              ]
+            },
+            { "textAlign": "left", "children": [{ "text": "" }] },
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "In this template, we use " },
+                { "text": "open", "fontWeight": "700" },
+                { "text": " " },
+                { "text": "intents.", "fontWeight": "700" },
+                {
+                  "text": " These intents organize information and help navigate users to their desired requests: i.e. transferring money, spending history etc. It also provides support for FAQs or sub-functions including checking your account balance or asking for help. "
+                }
+              ]
+            },
+            { "textAlign": "left", "children": [{ "text": "" }] },
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "To get started,", "fontWeight": "700" },
+                {
+                  "text": " you can click \"R\" on your keyboard to test the experience or jump right into the design to begin customizing the content!"
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 812.0054779052734,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e79c": {
+        "nodeID": "6143bb93c51863d0c459e79c",
+        "type": "markup_text",
+        "coords": [-2424.9628787420797, 193.05772077338636],
+        "data": {
+          "name": "",
+          "scale": 1.051771294161019,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Need to organize your actions?",
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "If your experience has \"custom actions\" that you would like represented in your design – this tip is for you. This could be opening a car door or fetching credit card information - actions a developer could implement during the design hand-off. "
+                }
+              ]
+            },
+            { "textAlign": "left", "children": [{ "text": "" }] },
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "The " },
+                { "text": "Custom", "fontWeight": "700" },
+                { "text": " " },
+                { "text": "Action", "fontWeight": "700" },
+                { "text": " " },
+                { "text": "step", "fontWeight": "400" },
+                {
+                  "text": " is extremely useful as a type of placeholder event, as you can (1) simulate a variety of outcomes stemming from that action, and (2) provide the context needed for a smooth developer hand-off. "
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 416.0393052910119,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e79b": {
+        "nodeID": "6143bb93c51863d0c459e79b",
+        "type": "markup_text",
+        "coords": [-2801.8153291069693, -122.23479229519427],
+        "data": {
+          "name": "",
+          "scale": 1.0539918278078173,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [{ "text": "Resources by:", "fontWeight": "700" }]
+            },
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "Icons created by " },
+                {
+                  "url": "https://voiceflow.com",
+                  "type": "link",
+                  "children": [
+                    {
+                      "text": "Voiceflow, Inc",
+                      "color": { "r": 93, "g": 157, "b": 245, "a": 1 },
+                      "underline": true
+                    }
+                  ]
+                },
+                { "text": " – Available for personal use" }
+              ]
+            },
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "Images sourced from " },
+                {
+                  "url": "https://pixabay.com/",
+                  "type": "link",
+                  "children": [
+                    {
+                      "text": "Pixabay",
+                      "color": { "r": 93, "g": 157, "b": 245, "a": 1 },
+                      "underline": true
+                    }
+                  ]
+                },
+                { "text": " under Creative Commons" }
+              ]
+            }
+          ],
+          "overrideWidth": 574,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e79a": {
+        "nodeID": "6143bb93c51863d0c459e79a",
+        "type": "markup_text",
+        "coords": [-2808.865568656026, -195.89849138689164],
+        "data": {
+          "name": "",
+          "scale": 1.020503688106854,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "To learn more about this template , watch our video tutorial (link to follow)"
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 602.5316399791157,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e798": {
+        "nodeID": "6143bb93c51863d0c459e798",
+        "type": "markup_text",
+        "coords": [-1130.5005442755805, 553.3462675996191],
+        "data": {
+          "name": "",
+          "scale": 0.8986807142206966,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "✅  Testable Paths\n", "fontWeight": "700" },
+                {
+                  "text": "- Make Transfer\n- Check Spending\n- Balance Inquiry",
+                  "fontWeight": "400"
+                }
+              ]
+            },
+            {
+              "textAlign": "left",
+              "children": [{ "fontWeight": "400", "text": "- General Help" }]
+            }
+          ],
+          "overrideWidth": 237.1979602320447
+        }
+      },
+      "6143bb93c51863d0c459e797": {
+        "nodeID": "6143bb93c51863d0c459e797",
+        "type": "markup_image",
+        "coords": [-1151.4501954318412, 521.6437271027148],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1613507015929-tip-2.png",
+          "width": 241.02948016127792,
+          "height": 213.19560898786253,
+          "rotate": 6.281301845145154,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e6f8": {
+        "nodeID": "6143bb93c51863d0c459e6f8",
+        "type": "block",
+        "coords": [3240.7016919029948, 593.0345170317702],
+        "data": {
+          "name": "No Response",
+          "color": "red",
+          "steps": ["6143bb93c51863d0c459e764"]
+        }
+      },
+      "6143bb93c51863d0c459e6f6": {
+        "nodeID": "6143bb93c51863d0c459e6f6",
+        "type": "block",
+        "coords": [3719.675596551361, 594.4420433208672],
+        "data": {
+          "name": "Spending - Recent Category Transactions",
+          "color": "standard",
+          "steps": ["6143bb93c51863d0c459e75e", "6148c6b930a1666a0b63e293"]
+        }
+      },
+      "6143bb93c51863d0c459e6f4": {
+        "nodeID": "6143bb93c51863d0c459e6f4",
+        "type": "block",
+        "coords": [2771.500682489279, 602.9141699317505],
+        "data": {
+          "name": "Prompt",
+          "color": "green",
+          "steps": [
+            "6148c67430a1666a0b63e24b",
+            "6148c67630a1666a0b63e256",
+            "6143bb93c51863d0c459e75b"
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e6f2": {
+        "nodeID": "6143bb93c51863d0c459e6f2",
+        "type": "block",
+        "coords": [955.2537106106778, 401.07664586772313],
+        "data": {
+          "name": "Prompt",
+          "color": "green",
+          "steps": ["6148c62f30a1666a0b63e217", "6143bb93c51863d0c459e752"]
+        }
+      },
+      "6143bb93c51863d0c459e6f0": {
+        "nodeID": "6143bb93c51863d0c459e6f0",
+        "type": "block",
+        "coords": [2296.578959956556, 607.58187313657],
+        "data": {
+          "name": "Spending - Recent Transactions",
+          "color": "standard",
+          "steps": ["6143bb93c51863d0c459e749", "6148c68330a1666a0b63e261"]
+        }
+      },
+      "6143bb93c51863d0c459e796": {
+        "nodeID": "6143bb93c51863d0c459e796",
+        "type": "markup_image",
+        "coords": [-1801.1988903666906, 324.36619222170754],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631762819767-mood--title-10.png",
+          "width": 579.3629673051367,
+          "height": 259.9591874738209,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e795": {
+        "nodeID": "6143bb93c51863d0c459e795",
+        "type": "markup_image",
+        "coords": [-2510.991337244312, -1009.8603505108399],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631649718397-template_-banking-assistant-chatbot-advanced.png",
+          "width": 840,
+          "height": 99,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e794": {
+        "nodeID": "6143bb93c51863d0c459e794",
+        "type": "markup_text",
+        "coords": [-543.0990299708945, 223.96783418362605],
+        "data": {
+          "name": "",
+          "scale": 1.0627009266879692,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "To account for the various ways a user might ask for a money transfer, it's important to enter a sizeable number of "
+                },
+                { "text": "utterances", "fontWeight": "700" },
+                { "text": ". You'll also need to include " },
+                { "text": "entities", "fontWeight": "700" },
+                {
+                  "text": " - or bits of important information needed to fulfill the user's intent. "
+                }
+              ]
+            },
+            { "textAlign": "left", "children": [{ "text": "" }] },
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "In this scenario, we have {3} entities:" }
+              ]
+            },
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "1. To whom are we sending money " },
+                { "text": "{contact} ", "fontWeight": "700" }
+              ]
+            },
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "2. When is it being sent " },
+                { "text": "{deliverydate}", "fontWeight": "700" }
+              ]
+            },
+            {
+              "textAlign": "left",
+              "children": [
+                { "fontWeight": "400", "text": "3. The amount being sent " },
+                { "fontWeight": "700", "text": "{amount}" },
+                { "text": ".  " }
+              ]
+            },
+            { "textAlign": "left", "children": [{ "text": "" }] },
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "See ", "italic": true },
+                { "italic": true, "text": "Figure 1.2 ", "fontWeight": "700" },
+                { "italic": true, "text": "for more information." }
+              ]
+            }
+          ],
+          "overrideWidth": 480.59177035491444,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e793": {
+        "nodeID": "6143bb93c51863d0c459e793",
+        "type": "markup_image",
+        "coords": [-1802.1876052009293, -50.757994883297044],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631731344238-mood--title-8.png",
+          "width": 579.9987955901956,
+          "height": 98.59091318608228,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e792": {
+        "nodeID": "6143bb93c51863d0c459e792",
+        "type": "markup_text",
+        "coords": [-1796.8288628387272, 52.568639758322036],
+        "data": {
+          "name": "",
+          "scale": 1.03485823060775,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "Here, we are using the " },
+                { "text": "Custom", "fontWeight": "700" },
+                { "text": " " },
+                { "text": "Action", "fontWeight": "700" },
+                {
+                  "text": " step to simulate an API request to the user's bank in order to retrieve their account info. "
+                }
+              ]
+            },
+            { "textAlign": "left", "children": [{ "text": "" }] }
+          ],
+          "overrideWidth": 480.6642103337048,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e791": {
+        "nodeID": "6143bb93c51863d0c459e791",
+        "type": "markup_text",
+        "coords": [-1802.742248018778, -261.5749419071838],
+        "data": {
+          "name": "",
+          "scale": 1.0262534357452526,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Users can invoke commands from anywhere in your experience. Commands are great for FAQ style questions. In the start block, we've created two FAQs: General Help & Account Balance. To learn more, enter the "
+                },
+                { "text": "Account Balance", "fontWeight": "700" },
+                { "text": " flow." }
+              ]
+            },
+            { "textAlign": "left", "children": [{ "text": "" }] }
+          ],
+          "overrideWidth": 488.8337817777319,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e790": {
+        "nodeID": "6143bb93c51863d0c459e790",
+        "type": "markup_image",
+        "coords": [-1806.907352883241, -367.1978243896229],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631725979091-mood--title-1.png",
+          "width": 580.6375718460451,
+          "height": 102.2562339391963,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e78f": {
+        "nodeID": "6143bb93c51863d0c459e78f",
+        "type": "markup_image",
+        "coords": [-1910.3468784710499, 124.73593209086931],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631683768226-untitled_artwork-6-2.png",
+          "width": 594.7661636626785,
+          "height": 175.14586414606484,
+          "rotate": 0.00806735052011922,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e6ee": {
+        "nodeID": "6143bb93c51863d0c459e6ee",
+        "type": "block",
+        "coords": [956.6949857700565, 219.1248544526027],
+        "data": {
+          "name": "Cancel",
+          "color": "red",
+          "steps": ["6148c5f730a1666a0b63e1fe"]
+        }
+      },
+      "6143bb93c51863d0c459e6ec": {
+        "nodeID": "6143bb93c51863d0c459e6ec",
+        "type": "block",
+        "coords": [287.66175192626724, 230.16567724887744],
+        "data": {
+          "name": "Confirm Transfer",
+          "color": "standard",
+          "steps": [
+            "6148c5bb30a1666a0b63e1f6",
+            "6143bb93c51863d0c459e73d",
+            "6148c61730a1666a0b63e210",
+            "6143bb93c51863d0c459e743"
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e78e": {
+        "nodeID": "6143bb93c51863d0c459e78e",
+        "type": "markup_image",
+        "coords": [-1251.8377586345582, -336.1504696793459],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631760329254-sm-resources.png",
+          "width": 427.60062664052225,
+          "height": 842.891538271696,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e78d": {
+        "nodeID": "6143bb93c51863d0c459e78d",
+        "type": "markup_image",
+        "coords": [-1241.5627182182448, -516.5305721393877],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1613534237478-welcome-header.png",
+          "width": 427.9582939545471,
+          "height": 143.9736235834742,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e6ea": {
+        "nodeID": "6143bb93c51863d0c459e6ea",
+        "type": "block",
+        "coords": [-1042.6780272714868, 133.14430420986145],
+        "data": {
+          "name": "Welcome",
+          "color": "standard",
+          "steps": [
+            "6143bb93c51863d0c459e72c",
+            "6148c51930a1666a0b63e0f8",
+            "6148c54e30a1666a0b63e105",
+            "6143bb93c51863d0c459e737"
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e6e8": {
+        "nodeID": "6143bb93c51863d0c459e6e8",
+        "type": "block",
+        "coords": [3249.2810321450424, 63.11694872596041],
+        "data": {
+          "name": "Spending - Category",
+          "color": "purple",
+          "steps": [
+            "6148c65b30a1666a0b63e235",
+            "6148c66230a1666a0b63e240",
+            "6143bb93c51863d0c459e727"
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e6e6": {
+        "nodeID": "6143bb93c51863d0c459e6e6",
+        "type": "block",
+        "coords": [2724.515540308247, 58.255009637747605],
+        "data": {
+          "name": "Spending - Total",
+          "color": "purple",
+          "steps": [
+            "6148c63f30a1666a0b63e21d",
+            "6148c65130a1666a0b63e229",
+            "6143bb93c51863d0c459e71b"
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e78c": {
+        "nodeID": "6143bb93c51863d0c459e78c",
+        "type": "markup_image",
+        "coords": [-547.2058808404119, 35.37749233366077],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631804041474-mood--title-19.png",
+          "width": 524.2159777236379,
+          "height": 173.91051393675195,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e78b": {
+        "nodeID": "6143bb93c51863d0c459e78b",
+        "type": "markup_text",
+        "coords": [1434.3599134189149, -26.63367253852067],
+        "data": {
+          "name": "",
+          "scale": 1.0627009266879692,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Once the user triggers an intent, you can qualify their response with an "
+                },
+                { "text": "IF", "fontWeight": "700" },
+                { "text": " " },
+                { "text": "statement", "fontWeight": "700" },
+                {
+                  "text": " to filter the user down a specific path. In this scenario, a user can trigger one of two conversaton paths based on whether they provide a "
+                },
+                { "text": "spending category", "fontWeight": "700" },
+                { "text": " in their response. " }
+              ]
+            },
+            { "textAlign": "left", "children": [{ "text": "" }] },
+            {
+              "textAlign": "left",
+              "children": [
+                { "text": "Pro-tip: ", "fontWeight": "700" },
+                {
+                  "text": "Consider an IF Statement a cross in the road based on their answers.",
+                  "italic": true
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 493.83705644087013,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e78a": {
+        "nodeID": "6143bb93c51863d0c459e78a",
+        "type": "markup_text",
+        "coords": [-542.8761669338145, -165.25166971692505],
+        "data": {
+          "name": "",
+          "scale": 1.0627009266879692,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Create intents based on the different banking options you want available to the user. In this experience, we've created two top-level intents: "
+                },
+                { "text": "transfer", "fontWeight": "700" },
+                { "text": " " },
+                { "text": "money", "fontWeight": "700" },
+                { "text": " and " },
+                { "text": "spending", "fontWeight": "700" },
+                { "text": " " },
+                { "text": "history", "fontWeight": "700" },
+                { "text": ". " }
+              ]
+            }
+          ],
+          "overrideWidth": 480.59177035491444,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e789": {
+        "nodeID": "6143bb93c51863d0c459e789",
+        "type": "markup_image",
+        "coords": [-550.2449034154623, -305.8508590892041],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631737259598-mood--title-12-1.png",
+          "width": 562.9261830361207,
+          "height": 130.72693350127918,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e6e4": {
+        "nodeID": "6143bb93c51863d0c459e6e4",
+        "type": "block",
+        "coords": [606.5621795304122, -262.1037801329874],
+        "data": {
+          "name": "Transfer Money",
+          "color": "blue",
+          "steps": [
+            "614a51c3e612b189c5796bea",
+            "6148c56f30a1666a0b63e10c",
+            "6143bb93c51863d0c459e70f"
+          ]
+        }
+      },
+      "6143bb93c51863d0c459e788": {
+        "nodeID": "6143bb93c51863d0c459e788",
+        "type": "markup_image",
+        "coords": [1427.8142186398682, -298.55681195939457],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631762932423-mood--title-16-1.png",
+          "width": 568.8593379554015,
+          "height": 262.41220645020104,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e787": {
+        "nodeID": "6143bb93c51863d0c459e787",
+        "type": "markup_image",
+        "coords": [2033.3390626165808, -326.4544130028916],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631760601593-sm-resources-3.png",
+          "width": 1976.5336201631367,
+          "height": 1862.5387722306268,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e786": {
+        "nodeID": "6143bb93c51863d0c459e786",
+        "type": "markup_image",
+        "coords": [110.52596745555032, -626.0105159897405],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631760418294-sm-resources.png",
+          "width": 1177.1262974435515,
+          "height": 1251.6385595150134,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e785": {
+        "nodeID": "6143bb93c51863d0c459e785",
+        "type": "markup_image",
+        "coords": [132.89834351255274, -512.9170853378482],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1613533960605-transfer-header.png",
+          "width": 1019.7472716075682,
+          "height": 145.4875034099803,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6143bb93c51863d0c459e6e2": {
+        "nodeID": "6143bb93c51863d0c459e6e2",
+        "type": "block",
+        "coords": [2982.939293208623, -268.9261056113299],
+        "data": {
+          "name": "Spending History",
+          "color": "blue",
+          "steps": ["6143bb93c51863d0c459e704", "6143bb93c51863d0c459e706"]
+        }
+      },
+      "6143bb93c51863d0c459e784": {
+        "nodeID": "6143bb93c51863d0c459e784",
+        "type": "markup_image",
+        "coords": [2115.1951652425996, -507.744143898857],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1613533987838-spending-header.png",
+          "width": 1818.8466066773915,
+          "height": 133.5945283880294,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6148a9f730a1666a0b63d9a4": {
+        "nodeID": "6148a9f730a1666a0b63d9a4",
+        "type": "command",
+        "data": {
+          "name": "General Help",
+          "next": null,
+          "ports": [],
+          "intent": "VF.HELP",
+          "mappings": [],
+          "diagramID": "61d64afce6b43f00068effef"
+        }
+      },
+      "6148ac3730a1666a0b63dcc4": {
+        "nodeID": "6148ac3730a1666a0b63dcc4",
+        "type": "command",
+        "data": {
+          "name": "Account Balance",
+          "next": null,
+          "ports": [],
+          "intent": "rck63agx",
+          "mappings": [],
+          "diagramID": "61d64afce6b43f00068efff1"
+        }
+      },
+      "6148c51930a1666a0b63e0f8": {
+        "nodeID": "6148c51930a1666a0b63e0f8",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "z029j3aix",
+              "content": [
+                {
+                  "children": [
+                    { "text": "Hello there! Welcome to Mobility Bank. " }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0829o3auk",
+              "content": [
+                {
+                  "children": [
+                    { "text": "Hi there, and welcome to Mobility Bank." }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c54e30a1666a0b63e105",
+              "id": "6148c51930a1666a0b63e0fa"
+            }
+          ]
+        }
+      },
+      "6148c54e30a1666a0b63e105": {
+        "nodeID": "6148c54e30a1666a0b63e105",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "sz2a73arq",
+              "content": [
+                { "children": [{ "text": "What can I help you with today?" }] }
+              ]
+            },
+            {
+              "id": "kf2aj3amu",
+              "content": [
+                { "children": [{ "text": "How can I help you today? " }] }
+              ]
+            },
+            {
+              "id": "4q2ar3aq5",
+              "content": [
+                { "children": [{ "text": "What can I do for you today? " }] }
+              ]
+            },
+            {
+              "id": "nu2b03a8l",
+              "content": [
+                {
+                  "children": [
+                    { "text": "Let me know how I can assist you today" }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e737",
+              "id": "6148c54e30a1666a0b63e108"
+            }
+          ]
+        }
+      },
+      "6148c56f30a1666a0b63e10c": {
+        "nodeID": "6148c56f30a1666a0b63e10c",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "8w2bb3a32",
+              "content": [
+                {
+                  "children": [
+                    { "text": "Ok, sending $" },
+                    {
+                      "id": "brb31rc",
+                      "name": "amount",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": " dollars to " },
+                    {
+                      "id": "cta31ts",
+                      "name": "contact",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": ", " },
+                    {
+                      "id": "idn31rf",
+                      "name": "deliverydate",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": ". Is this information correct?" }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e70f",
+              "id": "6148c56f30a1666a0b63e10f"
+            }
+          ]
+        }
+      },
+      "6148c5bb30a1666a0b63e1f6": {
+        "nodeID": "6148c5bb30a1666a0b63e1f6",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "z82eb3a4f",
+              "content": [
+                {
+                  "children": [
+                    { "text": "We've scheduled $" },
+                    {
+                      "id": "brb31rc",
+                      "name": "amount",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": " dollars to be sent to " },
+                    {
+                      "id": "cta31ts",
+                      "name": "contact",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": " " },
+                    {
+                      "id": "idn31rf",
+                      "name": "deliverydate",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": "." }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e73d",
+              "id": "6148c5bb30a1666a0b63e1f9"
+            }
+          ]
+        }
+      },
+      "6148c5f730a1666a0b63e1fe": {
+        "nodeID": "6148c5f730a1666a0b63e1fe",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "p62ez3an3",
+              "content": [
+                {
+                  "children": [
+                    { "text": "Sounds good. I've cancelled your transfer." }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0u2f43aem",
+              "content": [
+                { "children": [{ "text": "No problem. I've cancelled it." }] }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e6f2",
+              "id": "6148c5f730a1666a0b63e200",
+              "data": {
+                "points": [
+                  {
+                    "point": [791.6950424338527, 311.1248139299079],
+                    "reversed": true
+                  },
+                  { "point": [767.6950424338527, 311.1248139299079] },
+                  { "point": [767.6950424338527, 376.07662649803757] },
+                  { "point": [955.253689148799, 376.07662649803757] },
+                  {
+                    "point": [955.253689148799, 400.07662649803757],
+                    "toTop": true,
+                    "allowedToTop": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "6148c61730a1666a0b63e210": {
+        "nodeID": "6148c61730a1666a0b63e210",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "9w2fb3aon",
+              "content": [
+                {
+                  "children": [
+                    { "text": "Is there anything else I can help you with?" }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e743",
+              "id": "6148c61730a1666a0b63e213"
+            }
+          ]
+        }
+      },
+      "6148c62f30a1666a0b63e217": {
+        "nodeID": "6148c62f30a1666a0b63e217",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "rt2fh3amr",
+              "content": [
+                {
+                  "children": [{ "text": "Anything else I can help you with?" }]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e752",
+              "id": "6148c62f30a1666a0b63e21a"
+            }
+          ]
+        }
+      },
+      "6148c63f30a1666a0b63e21d": {
+        "nodeID": "6148c63f30a1666a0b63e21d",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "pw2fn3anq",
+              "content": [
+                {
+                  "children": [
+                    { "text": "You have spent " },
+                    { "text": "$1301.82", "fontWeight": "700" },
+                    { "text": " in the past " },
+                    {
+                      "id": "bm28316f",
+                      "name": "timeperiod",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": " days." }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c65130a1666a0b63e229",
+              "id": "6148c63f30a1666a0b63e21f"
+            }
+          ]
+        }
+      },
+      "6148c65130a1666a0b63e229": {
+        "nodeID": "6148c65130a1666a0b63e229",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "oi2fx3ajv",
+              "content": [
+                { "children": [{ "text": "Would you like more detail?" }] }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e71b",
+              "id": "6148c65130a1666a0b63e22b"
+            }
+          ]
+        }
+      },
+      "6148c65b30a1666a0b63e235": {
+        "nodeID": "6148c65b30a1666a0b63e235",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "op2g43axc",
+              "content": [
+                {
+                  "children": [
+                    { "text": "You have spent" },
+                    { "text": " $325.46", "fontWeight": "700" },
+                    { "text": " on " },
+                    {
+                      "id": "vt2p31mk",
+                      "name": "category",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": " in the last " },
+                    {
+                      "id": "bm28316f",
+                      "name": "timeperiod",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": " days" }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c66230a1666a0b63e240",
+              "id": "6148c65b30a1666a0b63e237"
+            }
+          ]
+        }
+      },
+      "6148c66230a1666a0b63e240": {
+        "nodeID": "6148c66230a1666a0b63e240",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "752g93a1e",
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Would you like to see a list of the transactions?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e727",
+              "id": "6148c66230a1666a0b63e243"
+            }
+          ]
+        }
+      },
+      "6148c67430a1666a0b63e24b": {
+        "nodeID": "6148c67430a1666a0b63e24b",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "002gm3af1",
+              "content": [{ "children": [{ "text": "Ok." }] }]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c67630a1666a0b63e256",
+              "id": "6148c67430a1666a0b63e24d"
+            }
+          ]
+        }
+      },
+      "6148c67630a1666a0b63e256": {
+        "nodeID": "6148c67630a1666a0b63e256",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "wr2gp3as0",
+              "content": [
+                {
+                  "children": [
+                    { "text": "Is there anything else I can help you with?" }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e75b",
+              "id": "6148c67630a1666a0b63e259"
+            }
+          ]
+        }
+      },
+      "6148c68330a1666a0b63e261": {
+        "nodeID": "6148c68330a1666a0b63e261",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "2e2gz3apl",
+              "content": [
+                {
+                  "children": [
+                    { "text": "You have made " },
+                    { "text": "12", "fontWeight": "700" },
+                    { "text": " transactions in the last " },
+                    {
+                      "id": "bm28316f",
+                      "name": "timeperiod",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": " days." }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e700",
+              "id": "6148c68330a1666a0b63e263",
+              "data": {
+                "points": [
+                  { "point": [2461.578770312177, 951.5818644401786] },
+                  { "point": [2485.578770312177, 951.5818644401786] },
+                  { "point": [2485.578770312177, 1037.5818261250529] },
+                  { "point": [2296.838333849804, 1037.5818261250529] },
+                  {
+                    "toTop": true,
+                    "allowedToTop": true,
+                    "point": [2296.838333849804, 1068.5216407875505]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "6148c69d30a1666a0b63e26f": {
+        "nodeID": "6148c69d30a1666a0b63e26f",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "vi2h83agg",
+              "content": [
+                {
+                  "children": [{ "text": "Anything else I can help you with?" }]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e77b",
+              "id": "6148c69d30a1666a0b63e271"
+            }
+          ]
+        }
+      },
+      "6148c6a630a1666a0b63e27b": {
+        "nodeID": "6148c6a630a1666a0b63e27b",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "p52hf3auh",
+              "content": [
+                {
+                  "children": [
+                    {
+                      "text": "Thank you for banking with us today. We hope to see you soon!"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e783",
+              "id": "6148c6a630a1666a0b63e27d"
+            }
+          ]
+        }
+      },
+      "6148c6b030a1666a0b63e287": {
+        "nodeID": "6148c6b030a1666a0b63e287",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "w42ho3aix",
+              "content": [
+                {
+                  "children": [{ "text": "Anything else I can help you with?" }]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e76a",
+              "id": "6148c6b030a1666a0b63e289"
+            }
+          ]
+        }
+      },
+      "6148c6b930a1666a0b63e293": {
+        "nodeID": "6148c6b930a1666a0b63e293",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "vr2hv3ajt",
+              "content": [
+                {
+                  "children": [
+                    { "text": "Here are your most recent " },
+                    {
+                      "id": "vt2p31mk",
+                      "name": "category",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": " transactions in the last " },
+                    {
+                      "id": "bm28316f",
+                      "name": "timeperiod",
+                      "isSlot": true,
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": " days." }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e6fe",
+              "id": "6148c6b930a1666a0b63e295",
+              "data": {
+                "points": [
+                  { "point": [3884.6755437672214, 938.4420147368024] },
+                  { "point": [3908.6755437672214, 938.4420147368024] },
+                  { "point": [3908.6755437672214, 1024.4420499907583] },
+                  { "point": [3724.939190538912, 1024.4420499907583] },
+                  {
+                    "toTop": true,
+                    "allowedToTop": true,
+                    "point": [3724.939190538912, 1074.1327662188774]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "6148c6e130a1666a0b63e2a1": {
+        "nodeID": "6148c6e130a1666a0b63e2a1",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "qa2i83ajw",
+              "content": [
+                {
+                  "children": [{ "text": "Anything else I can help you with?" }]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6143bb93c51863d0c459e775",
+              "id": "6148c6e130a1666a0b63e2a3"
+            }
+          ]
+        }
+      },
+      "614a51c3e612b189c5796bea": {
+        "nodeID": "614a51c3e612b189c5796bea",
+        "type": "intent",
+        "data": {
+          "intent": "wd931gl",
+          "mappings": [],
+          "availability": "GLOBAL",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c56f30a1666a0b63e10c",
+              "id": "614a51c3e612b189c5796beb"
+            }
+          ]
+        }
+      },
+      "614df9a3700d9c67555685ff": {
+        "nodeID": "614df9a3700d9c67555685ff",
+        "type": "markup_image",
+        "coords": [-2850.9191850845273, -747.3013160933458],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1632500130684-a-dynamic-chat-experience-for-banking.png",
+          "width": 818.6046843284546,
+          "height": 44.968194542706584,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "61d6c8cdc4e9282cb120f286": {
+        "nodeID": "61d6c8cdc4e9282cb120f286",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            { "id": "7tb53m7a", "content": [{ "children": [{ "text": "" }] }] }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "61d6c8d1c4e9282cb120f291",
+              "id": "61d6c8cdc4e9282cb120f288"
+            }
+          ]
+        }
+      },
+      "61d6c8cdc4e9282cb120f289": {
+        "nodeID": "61d6c8cdc4e9282cb120f289",
+        "type": "block",
+        "coords": [105.38524708268976, -285.1091960144987],
+        "data": {
+          "name": "New Block 18",
+          "color": "standard",
+          "steps": [
+            "61d6c8d6c4e9282cb120f298",
+            "61d6c8cdc4e9282cb120f286",
+            "61d6c8d1c4e9282cb120f291"
+          ]
+        }
+      },
+      "61d6c8d1c4e9282cb120f291": {
+        "nodeID": "61d6c8d1c4e9282cb120f291",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            { "id": "gyb73m3d", "content": [{ "children": [{ "text": "" }] }] }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            { "type": "next", "target": null, "id": "61d6c8d1c4e9282cb120f294" }
+          ]
+        }
+      },
+      "61d6c8d6c4e9282cb120f298": {
+        "nodeID": "61d6c8d6c4e9282cb120f298",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            { "id": "w2b93mdr", "content": [{ "children": [{ "text": "" }] }] }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "61d6c8cdc4e9282cb120f286",
+              "id": "61d6c8d6c4e9282cb120f29a"
+            }
+          ]
+        }
+      }
+    },
+    "variables": [],
+    "children": ["61d64afce6b43f00068effef", "61d64afce6b43f00068efff1"],
+    "name": "ROOT",
+    "versionID": "61d64afce6b43f00068effed",
+    "creatorID": 40923,
+    "modified": 1641466231
+  },
+  {
+    "_id": "61d64afce6b43f00068effef",
+    "offsetX": 64.6759864343782,
+    "offsetY": 220.81125844201773,
+    "zoom": 121.7569244494907,
+    "variables": [],
+    "children": [],
+    "nodes": {
+      "6148a9fc30a1666a0b63d9a7": {
+        "nodeID": "6148a9fc30a1666a0b63d9a7",
+        "type": "start",
+        "coords": [360, 120],
+        "data": {
+          "name": "Start",
+          "color": "standard",
+          "ports": [
+            {
+              "type": "",
+              "target": "6148abcc30a1666a0b63da6c",
+              "id": "6148aba930a1666a0b63d9a8",
+              "data": {
+                "points": [
+                  { "point": [525.0000216035476, 199.99997341292283] },
+                  { "point": [593.5721905645128, 199.99997341292283] },
+                  { "point": [593.5721905645128, 261.6851979467027] },
+                  { "point": [662.1443595254779, 261.6851979467027] }
+                ]
+              }
+            }
+          ],
+          "steps": []
+        }
+      },
+      "6148abcc30a1666a0b63da6c": {
+        "nodeID": "6148abcc30a1666a0b63da6c",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "2nlv3a1c",
+              "content": [{ "children": [{ "text": "Sure, how can I help?" }] }]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "",
+              "target": "6148abe430a1666a0b63da7f",
+              "id": "6148abcc30a1666a0b63da6e",
+              "data": {}
+            }
+          ]
+        }
+      },
+      "6148abcc30a1666a0b63da6f": {
+        "nodeID": "6148abcc30a1666a0b63da6f",
+        "type": "block",
+        "coords": [828.1443273628306, 120.68518278011562],
+        "data": {
+          "name": "Help",
+          "color": "blue",
+          "steps": ["6148abcc30a1666a0b63da6c", "6148abe430a1666a0b63da7f"]
+        }
+      },
+      "6148abe430a1666a0b63da7f": {
+        "nodeID": "6148abe430a1666a0b63da7f",
+        "type": "prompt",
+        "data": {
+          "ports": [
+            {
+              "type": "",
+              "target": null,
+              "id": "6148abe430a1666a0b63da82",
+              "data": {}
+            }
+          ],
+          "chips": null,
+          "buttons": [
+            { "name": "", "type": "INTENT", "payload": { "intentID": null } }
+          ],
+          "reprompt": null,
+          "noMatches": {
+            "type": "reprompt",
+            "pathName": "No Match",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktsthij000m03g6ag4itci69",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "I'm sorry, I didn't quite catch that. How can I help you today? "
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "versionID": "61d64afce6b43f00068effed",
+    "creatorID": 40923,
+    "name": "General Help",
+    "modified": 1641433852
+  },
+  {
+    "_id": "61d64afce6b43f00068efff1",
+    "offsetX": 545.064484416549,
+    "offsetY": 279.19710119836765,
+    "zoom": 80,
+    "variables": [],
+    "children": ["61d64afce6b43f00068efff0"],
+    "nodes": {
+      "6148ad1730a1666a0b63dd8b": {
+        "nodeID": "6148ad1730a1666a0b63dd8b",
+        "type": "start",
+        "coords": [360, 120],
+        "data": {
+          "name": "Start",
+          "color": "standard",
+          "steps": ["6148ad3c30a1666a0b63de65"],
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c09a30a1666a0b63df52",
+              "id": "6148ad1f30a1666a0b63dd8c",
+              "data": {
+                "points": [
+                  { "point": [524.9999999999998, 200.000015258789] },
+                  { "point": [654.8750076293943, 200.000015258789] },
+                  { "point": [654.8750076293943, 151.4999771118164] },
+                  {
+                    "allowedToTop": true,
+                    "point": [784.7500152587887, 151.4999771118164]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "6148ad3c30a1666a0b63de65": {
+        "nodeID": "6148ad3c30a1666a0b63de65",
+        "type": "command",
+        "data": {
+          "name": "Nearest Branch",
+          "next": null,
+          "ports": [],
+          "intent": "nfji3aqy",
+          "mappings": [],
+          "diagramID": "61d64afce6b43f00068efff0"
+        }
+      },
+      "6148c09a30a1666a0b63df57": {
+        "nodeID": "6148c09a30a1666a0b63df57",
+        "type": "visual",
+        "data": {
+          "name": "Visuals",
+          "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631806139335-cleanshot-2021-09-16-at-11.28.43.png",
+          "device": null,
+          "dimensions": { "width": 912, "height": 702 },
+          "visualType": "image",
+          "canvasVisibility": "full",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c0b030a1666a0b63df6e",
+              "id": "6148c09a30a1666a0b63df58"
+            }
+          ],
+          "frameType": "AUTO"
+        }
+      },
+      "6148c09a30a1666a0b63df54": {
+        "nodeID": "6148c09a30a1666a0b63df54",
+        "type": "setV2",
+        "data": {
+          "sets": [
+            { "type": "value", "variable": "balance", "expression": "$6420" }
+          ],
+          "title": "Set Balance",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c09a30a1666a0b63df57",
+              "id": "6148c09a30a1666a0b63df55"
+            }
+          ]
+        }
+      },
+      "6148c09a30a1666a0b63df52": {
+        "nodeID": "6148c09a30a1666a0b63df52",
+        "type": "block",
+        "coords": [949.7499999999998, 120.49999999999997],
+        "data": {
+          "name": "Account Balance",
+          "color": "blue",
+          "steps": [
+            "6148c09a30a1666a0b63df54",
+            "6148c09a30a1666a0b63df57",
+            "6148c0b030a1666a0b63df6e",
+            "61a0f372d8086e740f6cef61",
+            "6148c22630a1666a0b63dfc9"
+          ]
+        }
+      },
+      "6148c0b030a1666a0b63df6e": {
+        "nodeID": "6148c0b030a1666a0b63df6e",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "8o1ss3acs",
+              "content": [
+                {
+                  "children": [
+                    { "text": "Your account balance is" },
+                    { "text": " ", "fontWeight": "700" },
+                    {
+                      "id": "balance",
+                      "name": "balance",
+                      "type": "variable",
+                      "children": [{ "text": "" }]
+                    },
+                    { "text": " ", "fontWeight": "700" }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "61a0f372d8086e740f6cef61",
+              "id": "6148c0b030a1666a0b63df71"
+            }
+          ]
+        }
+      },
+      "6148c22630a1666a0b63dfc9": {
+        "nodeID": "6148c22630a1666a0b63dfc9",
+        "type": "prompt",
+        "data": {
+          "ports": [
+            { "type": "else", "target": null, "id": "6148c22630a1666a0b63dfcb" }
+          ],
+          "chips": null,
+          "buttons": [
+            {
+              "name": "Transfer Money",
+              "type": "INTENT",
+              "payload": { "intentID": "wd931gl" }
+            },
+            {
+              "name": "Spending History",
+              "type": "INTENT",
+              "payload": { "intentID": "gy2031mb" }
+            },
+            {
+              "name": "Nearest Branch",
+              "type": "INTENT",
+              "payload": { "intentID": "nfji3aqy" }
+            }
+          ],
+          "noReply": null,
+          "noMatches": {
+            "types": ["reprompt"],
+            "pathName": "No Match",
+            "randomize": false,
+            "reprompts": [
+              {
+                "id": "cktswvn5g01ub3g6a6313am39",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "I'm sorry. I didn't quite catch that. What else can I help you with? "
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "6148c28930a1666a0b63dfeb": {
+        "nodeID": "6148c28930a1666a0b63dfeb",
+        "type": "intent",
+        "data": {
+          "intent": "24jy3atf",
+          "mappings": [],
+          "availability": "GLOBAL",
+          "ports": [
+            { "type": "next", "target": null, "id": "6148c28930a1666a0b63dfea" }
+          ]
+        }
+      },
+      "6148c28930a1666a0b63dfe9": {
+        "nodeID": "6148c28930a1666a0b63dfe9",
+        "type": "block",
+        "coords": [958.1693944793126, 797.5036235020397],
+        "data": {
+          "name": "Back to Home Flow",
+          "color": "green",
+          "steps": ["6148c28930a1666a0b63dfeb"]
+        }
+      },
+      "6148c2c530a1666a0b63dff4": {
+        "nodeID": "6148c2c530a1666a0b63dff4",
+        "type": "markup_image",
+        "coords": [1215.840073639869, 706.4982064698803],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631730757450-mood--title-7.png",
+          "width": 502.4764404296875,
+          "height": 159.33884341859354,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6148c2c530a1666a0b63dff3": {
+        "nodeID": "6148c2c530a1666a0b63dff3",
+        "type": "markup_image",
+        "coords": [1210.082128103718, 377.7564903632157],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631728109517-mood--title-6.png",
+          "width": 463.8602752685545,
+          "height": 106.44915913673364,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6148c2c530a1666a0b63dff2": {
+        "nodeID": "6148c2c530a1666a0b63dff2",
+        "type": "markup_text",
+        "coords": [1203.0665140695567, 484.95764391313253],
+        "data": {
+          "name": "",
+          "scale": 1,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Previously, the set step was employed to assign the the user's account balance to the "
+                },
+                { "text": "{balance} variable", "fontWeight": "700" },
+                {
+                  "text": ". Use that variable in a speak step to respond to the user's inquiry. "
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 403.2554359436035,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6148c2c530a1666a0b63dff1": {
+        "nodeID": "6148c2c530a1666a0b63dff1",
+        "type": "markup_image",
+        "coords": [1210.582128103718, 121.80934154541303],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631728015626-mood--title-5.png",
+          "width": 445.1102752685545,
+          "height": 102.14630795453616,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6148c2c530a1666a0b63dff0": {
+        "nodeID": "6148c2c530a1666a0b63dff0",
+        "type": "markup_text",
+        "coords": [1202.0665140695567, 220.45764391313256],
+        "data": {
+          "name": "",
+          "scale": 1,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Include visuals to design a multimodal banking experience that caters to on-the-go customers."
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 403.2554359436035,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6148c2d530a1666a0b63dffb": {
+        "nodeID": "6148c2d530a1666a0b63dffb",
+        "type": "markup_text",
+        "coords": [176.12499999999966, 505.25],
+        "data": {
+          "name": "",
+          "scale": 0.9758998592921309,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "It's important to remember that subflow commands can only be invoked within that subflow or any flow housed within it. "
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 518.752191543579,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6148c2d530a1666a0b63dffa": {
+        "nodeID": "6148c2d530a1666a0b63dffa",
+        "type": "markup_text",
+        "coords": [297.87499999999966, 438],
+        "data": {
+          "name": "",
+          "scale": 1.167470405544091,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "center",
+              "children": [{ "text": "Subflow Commands", "fontWeight": "700" }]
+            }
+          ],
+          "overrideWidth": 221,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6148c2dd30a1666a0b63dffe": {
+        "nodeID": "6148c2dd30a1666a0b63dffe",
+        "type": "markup_image",
+        "coords": [138.24999999999966, 415.9999999999999],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631728620375-pro-tip-box-left.png",
+          "width": 570.3746037039198,
+          "height": 216.07749557495123,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6148c2fc30a1666a0b63e001": {
+        "nodeID": "6148c2fc30a1666a0b63e001",
+        "type": "markup_image",
+        "coords": [791.4704752770208, -231.87265877539355],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631727868725-mood--title-4.png",
+          "width": 461.58234189904255,
+          "height": 73.82749557495117,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6148c2fc30a1666a0b63e000": {
+        "nodeID": "6148c2fc30a1666a0b63e000",
+        "type": "markup_text",
+        "coords": [784.5785266286325, -162.29049955880532],
+        "data": {
+          "name": "",
+          "scale": 1,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "To keep things simple, we've assigned a fixed number to the account balance using a "
+                },
+                { "text": "set step", "fontWeight": "700" },
+                {
+                  "text": ". To accurately retreive this data from a user's bank account, an API integration between the bank and your experience is needed."
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 453.252254486084,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6148c30330a1666a0b63e006": {
+        "nodeID": "6148c30330a1666a0b63e006",
+        "type": "markup_text",
+        "coords": [195.12441377648508, -26.888584132712044],
+        "data": {
+          "name": "",
+          "scale": 1,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Adding new commands inside a subflow is a great way to prepare for any scenario a user might throw at you. "
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 453.252254486084,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "6148c30330a1666a0b63e005": {
+        "nodeID": "6148c30330a1666a0b63e005",
+        "type": "markup_image",
+        "coords": [203.39803549600708, -129.4842653771643],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631727711886-mood--title-3-4.png",
+          "width": 447.6102752685545,
+          "height": 102.7200214454958,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6148c30330a1666a0b63e004": {
+        "nodeID": "6148c30330a1666a0b63e004",
+        "type": "markup_image",
+        "coords": [204.28098103215814, -265.41587388562607],
+        "data": {
+          "name": "",
+          "url": "https://s3.amazonaws.com/com.getstoryflow.api.images/1631729882294-group-8.png",
+          "width": 325.9764404296875,
+          "height": 89.77909357490469,
+          "rotate": 0,
+          "blockColor": "standard"
+        }
+      },
+      "6148c37430a1666a0b63e00a": {
+        "nodeID": "6148c37430a1666a0b63e00a",
+        "type": "markup_text",
+        "coords": [1209.4741039771511, 861.5182313783989],
+        "data": {
+          "name": "",
+          "scale": 1,
+          "rotate": 0,
+          "content": [
+            {
+              "textAlign": "left",
+              "children": [
+                {
+                  "text": "Add buttons to help guide users to new menu options"
+                }
+              ]
+            }
+          ],
+          "overrideWidth": 403.2554359436035,
+          "backgroundColor": null,
+          "blockColor": "standard"
+        }
+      },
+      "61a0f372d8086e740f6cef61": {
+        "nodeID": "61a0f372d8086e740f6cef61",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "b3qv3cse",
+              "content": [
+                { "children": [{ "text": "What else can I help you with?" }] }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148c22630a1666a0b63dfc9",
+              "id": "61a0f372d8086e740f6cef64"
+            }
+          ]
+        }
+      }
+    },
+    "versionID": "61d64afce6b43f00068effed",
+    "creatorID": 40923,
+    "name": "Account Balance",
+    "modified": 1641433954
+  },
+  {
+    "_id": "61d64afce6b43f00068efff0",
+    "offsetX": 685.2,
+    "offsetY": 345.6,
+    "zoom": 80,
+    "variables": [],
+    "children": [],
+    "nodes": {
+      "6148ad4030a1666a0b63de68": {
+        "nodeID": "6148ad4030a1666a0b63de68",
+        "type": "start",
+        "coords": [360, 120],
+        "data": {
+          "name": "Start",
+          "color": "standard",
+          "steps": [],
+          "ports": [
+            {
+              "type": "next",
+              "target": "6148ad8d30a1666a0b63de6f",
+              "id": "6148ad4930a1666a0b63de69",
+              "data": {
+                "points": [
+                  { "point": [525.0000610351561, 200.0000076293945] },
+                  { "point": [603.000030517578, 200.0000076293945] },
+                  { "point": [603.000030517578, 141.50000762939456] },
+                  {
+                    "allowedToTop": true,
+                    "point": [680.9999999999999, 141.50000762939456]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "6148ad8d30a1666a0b63de6c": {
+        "nodeID": "6148ad8d30a1666a0b63de6c",
+        "type": "text",
+        "data": {
+          "name": "Text",
+          "texts": [
+            {
+              "id": "he1fm3acu",
+              "content": [
+                {
+                  "children": [
+                    { "text": "The closest branch is at 11 Wineva Street. " }
+                  ]
+                }
+              ]
+            }
+          ],
+          "canvasVisibility": "preview",
+          "blockColor": "standard",
+          "ports": [
+            { "type": "next", "target": null, "id": "6148ad8d30a1666a0b63de6e" }
+          ]
+        }
+      },
+      "6148ad8d30a1666a0b63de6f": {
+        "nodeID": "6148ad8d30a1666a0b63de6f",
+        "type": "block",
+        "coords": [845.9999999999999, 110.49999999999997],
+        "data": {
+          "name": "Response",
+          "color": "standard",
+          "steps": ["6148ad8d30a1666a0b63de6c"]
+        }
+      }
+    },
+    "versionID": "61d64afce6b43f00068effed",
+    "creatorID": 40923,
+    "name": "Nearest Branch",
+    "modified": 1641433852
+  }
+]

@@ -1,0 +1,1095 @@
+{
+  "_id": "61d64afce6b43f00068effed",
+  "name": "Initial Version",
+  "projectID": "61d64afc3c6360001b582d22",
+  "variables": ["balance", "name"],
+  "platformData": {
+    "slots": [
+      {
+        "key": "vt2p31mk",
+        "name": "category",
+        "type": { "value": "Custom" },
+        "color": "#4FA9B3",
+        "inputs": [
+          "food,dining, dinner, lunch, restaurants",
+          "coffee,tea, coffee shops",
+          "housing,rent, mortgage",
+          "subscriptions,subscriptions",
+          "Transit,public transportation, transportation",
+          "Entertainment,misc, miscellaneous, media",
+          "Home,household",
+          "Grocery,Shopping",
+          "Utilities,electrical, gas, ",
+          "Health,Fitness",
+          "Education,School, University, College"
+        ]
+      },
+      {
+        "key": "bm28316f",
+        "name": "timeperiod",
+        "type": { "value": "VF.NUMBER" },
+        "color": "#5C6BC0",
+        "inputs": [
+          "7,week, Week",
+          "30,month, Month",
+          "365,year",
+          "1,tomorrow, next day, in 24 hours"
+        ]
+      },
+      {
+        "key": "brb31rc",
+        "name": "amount",
+        "type": { "value": "VF.NUMBER" },
+        "color": "#5C6BC0",
+        "inputs": [
+          "100,hundred, a hundred, one hundred",
+          "1000,thousand, one thousand, a thousand",
+          "10,ten",
+          "50,fifty",
+          "20,twenty"
+        ]
+      },
+      {
+        "key": "idn31rf",
+        "name": "deliverydate",
+        "type": { "value": "Custom" },
+        "color": "#E04F78",
+        "inputs": [
+          "today,tonight, right now, as soon as possible, immediately",
+          "on January 1st,January 1st, 1st of January",
+          "on January 2nd,January 2nd, 2nd of January",
+          "on January 3rd,January 3rd, 3rd of January",
+          "on January 4th,January 4th, 4th of January",
+          "on January 5th,January 5th, 5th of January",
+          "on January 6th,January 6th, 6th of January",
+          "on January 7th,January 7th, 7th of January",
+          "on January 8th,January 8th, 8th of January",
+          "on January 9th,January 9th, 9th of January",
+          "on January 10th,January 10th, 10th of January",
+          "on January 11th,January 11th, 11th of January",
+          "on January 12th,January 12th, 12th of January",
+          "on January 13th,January 13th, 13th of January",
+          "on January 14th,January 14th, 14th of January",
+          "on January 15th,January 15th, 15th of January",
+          "on January 16th,January 16th, 16th of January",
+          "on January 17th,January 17th, 17th of January",
+          "on January 18th,January 18th, 18th of January",
+          "on January 19th,January 19th, 19th of January",
+          "on January 20th,January 20th, 20th of January",
+          "on January 21st,January 21st, 21st of January",
+          "on January 22nd,January 22nd, 22nd of January",
+          "on January 23rd,January 23rd, 23rd of January",
+          "on January 24th,January 24th, 24th of January",
+          "on January 25th,January 25th, 25th of January",
+          "on January 26th,January 26th, 26th of January",
+          "on January 27th,January 27th, 27th of January",
+          "on January 28th,January 28th, 28th of January",
+          "on January 29th,January 29th, 29th of January",
+          "on January 30th,January 30th, 30th of January",
+          "on January 31st,January 31st, 31st of January",
+          "on February 1st,February 1st, 1st of February",
+          "on February 2nd,February 2nd, 2nd of February",
+          "on February 3rd,February 3rd, 3rd of February",
+          "on February 4th,February 4th, 4th of February",
+          "on February 5th,February 5th, 5th of February",
+          "on February 6th,February 6th, 6th of February",
+          "on February 7th,February 7th, 7th of February",
+          "on February 8th,February 8th, 8th of February",
+          "on February 9th,February 9th, 9th of February",
+          "on February 10th,February 10th, 10th of February",
+          "on February 11th,February 11th, 11th of February",
+          "on February 12th,February 12th, 12th of February",
+          "on February 13th,February 13th, 13th of February",
+          "on February 14th,February 14th, 14th of February",
+          "on February 15th,February 15th, 15th of February",
+          "on February 16th,February 16th, 16th of February",
+          "on February 17th,February 17th, 17th of February",
+          "on February 18th,February 18th, 18th of February",
+          "on February 19th,February 19th, 19th of February",
+          "on February 20th,February 20th, 20th of February",
+          "on February 21st,February 21st, 21st of February",
+          "on February 22nd,February 22nd, 22nd of February",
+          "on February 23rd,February 23rd, 23rd of February",
+          "on February 24th,February 24th, 24th of February",
+          "on February 25th,February 25th, 25th of February",
+          "on February 26th,February 26th, 26th of February",
+          "on February 27th,February 27th, 27th of February",
+          "on February 28th,February 28th, 28th of February",
+          "on March 1st,March 1st, 1st of March",
+          "on March 2nd,March 2nd, 2nd of March",
+          "on March 3rd,March 3rd, 3rd of March",
+          "on March 4th,March 4th, 4th of March",
+          "on March 5th,March 5th, 5th of March",
+          "on March 6th,March 6th, 6th of March",
+          "on March 7th,March 7th, 7th of March",
+          "on March 8th,March 8th, 8th of March",
+          "on March 9th,March 9th, 9th of March",
+          "on March 10th,March 10th, 10th of March",
+          "on March 11th,March 11th, 11th of March",
+          "on March 12th,March 12th, 12th of March",
+          "on March 13th,March 13th, 13th of March",
+          "on March 14th,March 14th, 14th of March",
+          "on March 15th,March 15th, 15th of March",
+          "on March 16th,March 16th, 16th of March",
+          "on March 17th,March 17th, 17th of March",
+          "on March 18th,March 18th, 18th of March",
+          "on March 19th,March 19th, 19th of March",
+          "on March 20th,March 20th, 20th of March",
+          "on March 21st,March 21st, 21st of March",
+          "on March 22nd,March 22nd, 22nd of March",
+          "on March 23rd,March 23rd, 23rd of March",
+          "on March 24th,March 24th, 24th of March",
+          "on March 25th,March 25th, 25th of March",
+          "on March 26th,March 26th, 26th of March",
+          "on March 27th,March 27th, 27th of March",
+          "on March 28th,March 28th, 28th of March",
+          "on March 29th,March 29th, 29th of March",
+          "on March 30th,March 30th, 30th of March",
+          "on March 31st,March 31st, 31st of March",
+          "on April 1st,April 1st, 1st of April",
+          "on April 2nd,April 2nd, 2nd of April",
+          "on April 3rd,April 3rd, 3rd of April",
+          "on April 4th,April 4th, 4th of April",
+          "on April 5th,April 5th, 5th of April",
+          "on April 6th,April 6th, 6th of April",
+          "on April 7th,April 7th, 7th of April",
+          "on April 8th,April 8th, 8th of April",
+          "on April 9th,April 9th, 9th of April",
+          "on April 10th,April 10th, 10th of April",
+          "on April 11th,April 11th, 11th of April",
+          "on April 12th,April 12th, 12th of April",
+          "on April 13th,April 13th, 13th of April",
+          "on April 14th,April 14th, 14th of April",
+          "on April 15th,April 15th, 15th of April",
+          "on April 16th,April 16th, 16th of April",
+          "on April 17th,April 17th, 17th of April",
+          "on April 18th,April 18th, 18th of April",
+          "on April 19th,April 19th, 19th of April",
+          "on April 20th,April 20th, 20th of April",
+          "on April 21st,April 21st, 21st of April",
+          "on April 22nd,April 22nd, 22nd of April",
+          "on April 23rd,April 23rd, 23rd of April",
+          "on April 24th,April 24th, 24th of April",
+          "on April 25th,April 25th, 25th of April",
+          "on April 26th,April 26th, 26th of April",
+          "on April 27th,April 27th, 27th of April",
+          "on April 28th,April 28th, 28th of April",
+          "on April 29th,April 29th, 29th of April",
+          "on April 30th,April 30th, 30th of April",
+          "on May 1st,May 1st, 1st of May",
+          "on May 2nd,May 2nd, 2nd of May",
+          "on May 3rd,May 3rd, 3rd of May",
+          "on May 4th,May 4th, 4th of May",
+          "on May 5th,May 5th, 5th of May",
+          "on May 6th,May 6th, 6th of May",
+          "on May 7th,May 7th, 7th of May",
+          "on May 8th,May 8th, 8th of May",
+          "on May 9th,May 9th, 9th of May",
+          "on May 10th,May 10th, 10th of May",
+          "on May 11th,May 11th, 11th of May",
+          "on May 12th,May 12th, 12th of May",
+          "on May 13th,May 13th, 13th of May",
+          "on May 14th,May 14th, 14th of May",
+          "on May 15th,May 15th, 15th of May",
+          "on May 16th,May 16th, 16th of May",
+          "on May 17th,May 17th, 17th of May",
+          "on May 18th,May 18th, 18th of May",
+          "on May 19th,May 19th, 19th of May",
+          "on May 20th,May 20th, 20th of May",
+          "on May 21st,May 21st, 21st of May",
+          "on May 22nd,May 22nd, 22nd of May",
+          "on May 23rd,May 23rd, 23rd of May",
+          "on May 24th,May 24th, 24th of May",
+          "on May 25th,May 25th, 25th of May",
+          "on May 26th,May 26th, 26th of May",
+          "on May 27th,May 27th, 27th of May",
+          "on May 28th,May 28th, 28th of May",
+          "on May 29th,May 29th, 29th of May",
+          "on May 30th,May 30th, 30th of May",
+          "on May 31st,May 31st, 31st of May",
+          "on June 1st,June 1st, 1st of June",
+          "on June 2nd,June 2nd, 2nd of June",
+          "on June 3rd,June 3rd, 3rd of June",
+          "on June 4th,June 4th, 4th of June",
+          "on June 5th,June 5th, 5th of June",
+          "on June 6th,June 6th, 6th of June",
+          "on June 7th,June 7th, 7th of June",
+          "on June 8th,June 8th, 8th of June",
+          "on June 9th,June 9th, 9th of June",
+          "on June 10th,June 10th, 10th of June",
+          "on June 11th,June 11th, 11th of June",
+          "on June 12th,June 12th, 12th of June",
+          "on June 13th,June 13th, 13th of June",
+          "on June 14th,June 14th, 14th of June",
+          "on June 15th,June 15th, 15th of June",
+          "on June 16th,June 16th, 16th of June",
+          "on June 17th,June 17th, 17th of June",
+          "on June 18th,June 18th, 18th of June",
+          "on June 19th,June 19th, 19th of June",
+          "on June 20th,June 20th, 20th of June",
+          "on June 21st,June 21st, 21st of June",
+          "on June 22nd,June 22nd, 22nd of June",
+          "on June 23rd,June 23rd, 23rd of June",
+          "on June 24th,June 24th, 24th of June",
+          "on June 25th,June 25th, 25th of June",
+          "on June 26th,June 26th, 26th of June",
+          "on June 27th,June 27th, 27th of June",
+          "on June 28th,June 28th, 28th of June",
+          "on June 29th,June 29th, 29th of June",
+          "on June 30th,June 30th, 30th of June",
+          "on July 1st,July 1st, 1st of July",
+          "on July 2nd,July 2nd, 2nd of July",
+          "on July 3rd,July 3rd, 3rd of July",
+          "on July 4th,July 4th, 4th of July",
+          "on July 5th,July 5th, 5th of July",
+          "on July 6th,July 6th, 6th of July",
+          "on July 7th,July 7th, 7th of July",
+          "on July 8th,July 8th, 8th of July",
+          "on July 9th,July 9th, 9th of July",
+          "on July 10th,July 10th, 10th of July",
+          "on July 11th,July 11th, 11th of July",
+          "on July 12th,July 12th, 12th of July",
+          "on July 13th,July 13th, 13th of July",
+          "on July 14th,July 14th, 14th of July",
+          "on July 15th,July 15th, 15th of July",
+          "on July 16th,July 16th, 16th of July",
+          "on July 17th,July 17th, 17th of July",
+          "on July 18th,July 18th, 18th of July",
+          "on July 19th,July 19th, 19th of July",
+          "on July 20th,July 20th, 20th of July",
+          "on July 21st,July 21st, 21st of July",
+          "on July 22nd,July 22nd, 22nd of July",
+          "on July 23rd,July 23rd, 23rd of July",
+          "on July 24th,July 24th, 24th of July",
+          "on July 25th,July 25th, 25th of July",
+          "on July 26th,July 26th, 26th of July",
+          "on July 27th,July 27th, 27th of July",
+          "on July 28th,July 28th, 28th of July",
+          "on July 29th,July 29th, 29th of July",
+          "on July 30th,July 30th, 30th of July",
+          "on July 31st,July 31st, 31st of July",
+          "on August 1st,August 1st, 1st of August",
+          "on August 2nd,August 2nd, 2nd of August",
+          "on August 3rd,August 3rd, 3rd of August",
+          "on August 4th,August 4th, 4th of August",
+          "on August 5th,August 5th, 5th of August",
+          "on August 6th,August 6th, 6th of August",
+          "on August 7th,August 7th, 7th of August",
+          "on August 8th,August 8th, 8th of August",
+          "on August 9th,August 9th, 9th of August",
+          "on August 10th,August 10th, 10th of August",
+          "on August 11th,August 11th, 11th of August",
+          "on August 12th,August 12th, 12th of August",
+          "on August 13th,August 13th, 13th of August",
+          "on August 14th,August 14th, 14th of August",
+          "on August 15th,August 15th, 15th of August",
+          "on August 16th,August 16th, 16th of August",
+          "on August 17th,August 17th, 17th of August",
+          "on August 18th,August 18th, 18th of August",
+          "on August 19th,August 19th, 19th of August",
+          "on August 20th,August 20th, 20th of August",
+          "on August 21st,August 21st, 21st of August",
+          "on August 22nd,August 22nd, 22nd of August",
+          "on August 23rd,August 23rd, 23rd of August",
+          "on August 24th,August 24th, 24th of August",
+          "on August 25th,August 25th, 25th of August",
+          "on August 26th,August 26th, 26th of August",
+          "on August 27th,August 27th, 27th of August",
+          "on August 28th,August 28th, 28th of August",
+          "on August 29th,August 29th, 29th of August",
+          "on August 30th,August 30th, 30th of August",
+          "on August 31st,August 31st, 31st of August",
+          "on September 1st,September 1st, 1st of September",
+          "on September 2nd,September 2nd, 2nd of September",
+          "on September 3rd,September 3rd, 3rd of September",
+          "on September 4th,September 4th, 4th of September",
+          "on September 5th,September 5th, 5th of September",
+          "on September 6th,September 6th, 6th of September",
+          "on September 7th,September 7th, 7th of September",
+          "on September 8th,September 8th, 8th of September",
+          "on September 9th,September 9th, 9th of September",
+          "on September 10th,September 10th, 10th of September",
+          "on September 11th,September 11th, 11th of September",
+          "on September 12th,September 12th, 12th of September",
+          "on September 13th,September 13th, 13th of September",
+          "on September 14th,September 14th, 14th of September",
+          "on September 15th,September 15th, 15th of September",
+          "on September 16th,September 16th, 16th of September",
+          "on September 17th,September 17th, 17th of September",
+          "on September 18th,September 18th, 18th of September",
+          "on September 19th,September 19th, 19th of September",
+          "on September 20th,September 20th, 20th of September",
+          "on September 21st,September 21st, 21st of September",
+          "on September 22nd,September 22nd, 22nd of September",
+          "on September 23rd,September 23rd, 23rd of September",
+          "on September 24th,September 24th, 24th of September",
+          "on September 25th,September 25th, 25th of September",
+          "on September 26th,September 26th, 26th of September",
+          "on September 27th,September 27th, 27th of September",
+          "on September 28th,September 28th, 28th of September",
+          "on September 29th,September 29th, 29th of September",
+          "on September 30th,September 30th, 30th of September",
+          "on October 1st,October 1st, 1st of October",
+          "on October 2nd,October 2nd, 2nd of October",
+          "on October 3rd,October 3rd, 3rd of October",
+          "on October 4th,October 4th, 4th of October",
+          "on October 5th,October 5th, 5th of October",
+          "on October 6th,October 6th, 6th of October",
+          "on October 7th,October 7th, 7th of October",
+          "on October 8th,October 8th, 8th of October",
+          "on October 9th,October 9th, 9th of October",
+          "on October 10th,October 10th, 10th of October",
+          "on October 11th,October 11th, 11th of October",
+          "on October 12th,October 12th, 12th of October",
+          "on October 13th,October 13th, 13th of October",
+          "on October 14th,October 14th, 14th of October",
+          "on October 15th,October 15th, 15th of October",
+          "on October 16th,October 16th, 16th of October",
+          "on October 17th,October 17th, 17th of October",
+          "on October 18th,October 18th, 18th of October",
+          "on October 19th,October 19th, 19th of October",
+          "on October 20th,October 20th, 20th of October",
+          "on October 21st,October 21st, 21st of October",
+          "on October 22nd,October 22nd, 22nd of October",
+          "on October 23rd,October 23rd, 23rd of October",
+          "on October 24th,October 24th, 24th of October",
+          "on October 25th,October 25th, 25th of October",
+          "on October 26th,October 26th, 26th of October",
+          "on October 27th,October 27th, 27th of October",
+          "on October 28th,October 28th, 28th of October",
+          "on October 29th,October 29th, 29th of October",
+          "on October 30th,October 30th, 30th of October",
+          "on October 31st,October 31st, 31st of October",
+          "on November 1st,November 1st, 1st of November",
+          "on November 2nd,November 2nd, 2nd of November",
+          "on November 3rd,November 3rd, 3rd of November",
+          "on November 4th,November 4th, 4th of November",
+          "on November 5th,November 5th, 5th of November",
+          "on November 6th,November 6th, 6th of November",
+          "on November 7th,November 7th, 7th of November",
+          "on November 8th,November 8th, 8th of November",
+          "on November 9th,November 9th, 9th of November",
+          "on November 10th,November 10th, 10th of November",
+          "on November 11th,November 11th, 11th of November",
+          "on November 12th,November 12th, 12th of November",
+          "on November 13th,November 13th, 13th of November",
+          "on November 14th,November 14th, 14th of November",
+          "on November 15th,November 15th, 15th of November",
+          "on November 16th,November 16th, 16th of November",
+          "on November 17th,November 17th, 17th of November",
+          "on November 18th,November 18th, 18th of November",
+          "on November 19th,November 19th, 19th of November",
+          "on November 20th,November 20th, 20th of November",
+          "on November 21st,November 21st, 21st of November",
+          "on November 22nd,November 22nd, 22nd of November",
+          "on November 23rd,November 23rd, 23rd of November",
+          "on November 24th,November 24th, 24th of November",
+          "on November 25th,November 25th, 25th of November",
+          "on November 26th,November 26th, 26th of November",
+          "on November 27th,November 27th, 27th of November",
+          "on November 28th,November 28th, 28th of November",
+          "on November 29th,November 29th, 29th of November",
+          "on November 30th,November 30th, 30th of November",
+          "on December 1st,December 1st, 1st of December",
+          "on December 2nd,December 2nd, 2nd of December",
+          "on December 3rd,December 3rd, 3rd of December",
+          "on December 4th,December 4th, 4th of December",
+          "on December 5th,December 5th, 5th of December",
+          "on December 6th,December 6th, 6th of December",
+          "on December 7th,December 7th, 7th of December",
+          "on December 8th,December 8th, 8th of December",
+          "on December 9th,December 9th, 9th of December",
+          "on December 10th,December 10th, 10th of December",
+          "on December 11th,December 11th, 11th of December",
+          "on December 12th,December 12th, 12th of December",
+          "on December 13th,December 13th, 13th of December",
+          "on December 14th,December 14th, 14th of December",
+          "on December 15th,December 15th, 15th of December",
+          "on December 16th,December 16th, 16th of December",
+          "on December 17th,December 17th, 17th of December",
+          "on December 18th,December 18th, 18th of December",
+          "on December 19th,December 19th, 19th of December",
+          "on December 20th,December 20th, 20th of December",
+          "on December 21st,December 21st, 21st of December",
+          "on December 22nd,December 22nd, 22nd of December",
+          "on December 23rd,December 23rd, 23rd of December",
+          "on December 24th,December 24th, 24th of December",
+          "on December 25th,December 25th, 25th of December",
+          "on December 26th,December 26th, 26th of December",
+          "on December 27th,December 27th, 27th of December",
+          "on December 28th,December 28th, 28th of December",
+          "on December 29th,December 29th, 29th of December",
+          "on December 30th,December 30th, 30th of December",
+          "on December 31st,December 31st, 31st of December",
+          "Tomorrow,Tomorrow, tomorrow",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ]
+      },
+      {
+        "key": "cta31ts",
+        "name": "contact",
+        "type": { "value": "VF.NAME" },
+        "color": "#4F9ED1",
+        "inputs": []
+      }
+    ],
+    "intents": [
+      {
+        "key": "gy2031mb",
+        "name": "spending_history",
+        "inputs": [
+          {
+            "text": "how much money did I spend on {{[category].vt2p31mk}} ",
+            "slots": ["vt2p31mk"]
+          },
+          {
+            "text": "how much have I spent on {{[category].vt2p31mk}} ",
+            "slots": ["vt2p31mk"]
+          },
+          {
+            "text": "how much did I spend on {{[category].vt2p31mk}} last {{[timeperiod].bm28316f}} ",
+            "slots": ["vt2p31mk", "bm28316f"]
+          },
+          {
+            "text": "how much did I spend on {{[category].vt2p31mk}} this last {{[timeperiod].bm28316f}} ",
+            "slots": ["vt2p31mk", "bm28316f"]
+          },
+          {
+            "text": "show me how much I've recently spent on {{[category].vt2p31mk}}",
+            "slots": ["vt2p31mk"]
+          },
+          {
+            "text": "how much money have I spent on {{[category].vt2p31mk}} in the past few days",
+            "slots": ["vt2p31mk"]
+          },
+          {
+            "text": "how much money have I spent on {{[category].vt2p31mk}}",
+            "slots": ["vt2p31mk"]
+          },
+          { "text": "show me how much I've spent recently", "slots": [] },
+          { "text": "show me my recent transactions", "slots": [] },
+          { "text": "show me my recent spending", "slots": [] },
+          { "text": "show me my spending history", "slots": [] },
+          { "text": "show me my transaction history", "slots": [] },
+          {
+            "text": "what have I spent in the last {{[timeperiod].bm28316f}} days",
+            "slots": ["bm28316f"]
+          },
+          {
+            "text": "what was my spending in the last {{[timeperiod].bm28316f}} days",
+            "slots": ["bm28316f"]
+          },
+          {
+            "text": "show my spending for the last {{[timeperiod].bm28316f}} days",
+            "slots": ["bm28316f"]
+          },
+          {
+            "text": "how much have I spent in the last {{[timeperiod].bm28316f}} days",
+            "slots": ["bm28316f"]
+          }
+        ],
+        "slots": [
+          {
+            "id": "bm28316f",
+            "dialog": {
+              "prompt": [
+                {
+                  "id": "cktngs98y00cs3m6m7ryjvj09",
+                  "content": [
+                    {
+                      "children": [
+                        {
+                          "text": "How many days of transactions should I show?"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "confirm": [
+                {
+                  "id": "cktngs98y00ct3m6mizdlisi3",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "utterances": [
+                {
+                  "text": "show {{[timeperiod].bm28316f}} days",
+                  "slots": ["bm28316f"]
+                },
+                {
+                  "text": "show me {{[timeperiod].bm28316f}} days please",
+                  "slots": ["bm28316f"]
+                },
+                {
+                  "text": "{{[timeperiod].bm28316f}} days",
+                  "slots": ["bm28316f"]
+                },
+                { "text": "{{[timeperiod].bm28316f}}", "slots": ["bm28316f"] }
+              ],
+              "confirmEnabled": false
+            },
+            "required": true
+          },
+          {
+            "id": "vt2p31mk",
+            "dialog": {
+              "prompt": [
+                {
+                  "id": "cktngs98y00cu3m6mc89br3aa",
+                  "content": [
+                    { "children": [{ "text": "For what category?" }] }
+                  ]
+                }
+              ],
+              "confirm": [
+                {
+                  "id": "cktngs98y00cv3m6m7zzx69y0",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "utterances": [
+                {
+                  "text": "in {{[category].vt2p31mk}} ",
+                  "slots": ["vt2p31mk"]
+                },
+                { "text": "{{[category].vt2p31mk}}", "slots": ["vt2p31mk"] }
+              ],
+              "confirmEnabled": false
+            },
+            "required": false
+          }
+        ]
+      },
+      {
+        "key": "wd931gl",
+        "name": "transfer_money",
+        "inputs": [
+          {
+            "text": "send {{[amount].brb31rc}} in a {{[deliverydate].idn31rf}} to {{[contact].cta31ts}}",
+            "slots": ["brb31rc", "idn31rf", "cta31ts"]
+          },
+          {
+            "text": "I want to transfer {{[amount].brb31rc}} to {{[contact].cta31ts}}",
+            "slots": ["brb31rc", "cta31ts"]
+          },
+          {
+            "text": "Transfer {{[amount].brb31rc}} dollars to {{[contact].cta31ts}} on {{[deliverydate].idn31rf}}",
+            "slots": ["brb31rc", "cta31ts", "idn31rf"]
+          },
+          { "text": "make tranfer now", "slots": [] },
+          {
+            "text": "make a {{[amount].brb31rc}} dollar transferred to {{[contact].cta31ts}}",
+            "slots": ["brb31rc", "cta31ts"]
+          },
+          {
+            "text": "Send a {{[amount].brb31rc}} dollar transfer",
+            "slots": ["brb31rc"]
+          },
+          {
+            "text": "Send a transfer to {{[contact].cta31ts}}",
+            "slots": ["cta31ts"]
+          },
+          {
+            "text": "Send a transfer {{[deliverydate].idn31rf}}",
+            "slots": ["idn31rf"]
+          },
+          {
+            "text": "Transfer {{[amount].brb31rc}} dollars to {{[contact].cta31ts}} {{[deliverydate].idn31rf}}",
+            "slots": ["brb31rc", "cta31ts", "idn31rf"]
+          },
+          {
+            "text": "Send {{[amount].brb31rc}} dollars {{[deliverydate].idn31rf}}",
+            "slots": ["brb31rc", "idn31rf"]
+          },
+          {
+            "text": "Send {{[amount].brb31rc}} dollars for dinner to {{[contact].cta31ts}}",
+            "slots": ["brb31rc", "cta31ts"]
+          },
+          {
+            "text": "Send {{[contact].cta31ts}} {{[amount].brb31rc}} dollars for dinner {{[deliverydate].idn31rf}}",
+            "slots": ["cta31ts", "brb31rc", "idn31rf"]
+          }
+        ],
+        "slots": [
+          {
+            "id": "cta31ts",
+            "dialog": {
+              "prompt": [
+                {
+                  "id": "cktngs98y00cw3m6myxlwssyt",
+                  "content": [
+                    { "children": [{ "text": "Who should I send this to?" }] }
+                  ]
+                }
+              ],
+              "confirm": [
+                {
+                  "id": "cktngs98y00cx3m6mmnwqbmn9",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "utterances": [
+                {
+                  "text": "{{[contact].cta31ts}} please",
+                  "slots": ["cta31ts"]
+                },
+                {
+                  "text": "Please send it to {{[contact].cta31ts}}",
+                  "slots": ["cta31ts"]
+                },
+                {
+                  "text": "Transfer it to {{[contact].cta31ts}}",
+                  "slots": ["cta31ts"]
+                },
+                {
+                  "text": "Send it to {{[contact].cta31ts}}",
+                  "slots": ["cta31ts"]
+                },
+                {
+                  "text": "to {{[contact].cta31ts}} please",
+                  "slots": ["cta31ts"]
+                },
+                { "text": "{{[contact].cta31ts}}", "slots": ["cta31ts"] }
+              ],
+              "confirmEnabled": false
+            },
+            "required": true
+          },
+          {
+            "id": "brb31rc",
+            "dialog": {
+              "prompt": [
+                {
+                  "id": "cktngs98y00cy3m6mqrfkm2co",
+                  "content": [
+                    {
+                      "children": [
+                        { "text": "How much will you be transferring?" }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "confirm": [
+                {
+                  "id": "cktngs98y00cz3m6m5530ldfy",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "utterances": [
+                {
+                  "text": "{{[amount].brb31rc}} dollars",
+                  "slots": ["brb31rc"]
+                },
+                {
+                  "text": "Send {{[amount].brb31rc}} dollars",
+                  "slots": ["brb31rc"]
+                },
+                {
+                  "text": "Tranfer {{[amount].brb31rc}} dollars",
+                  "slots": ["brb31rc"]
+                },
+                {
+                  "text": "Transfer {{[amount].brb31rc}} dollars please",
+                  "slots": ["brb31rc"]
+                },
+                {
+                  "text": "Transfer {{[amount].brb31rc}}",
+                  "slots": ["brb31rc"]
+                },
+                {
+                  "text": "I'll send {{[amount].brb31rc}} ",
+                  "slots": ["brb31rc"]
+                },
+                {
+                  "text": "Send {{[amount].brb31rc}} please",
+                  "slots": ["brb31rc"]
+                },
+                { "text": "Send {{[amount].brb31rc}}", "slots": ["brb31rc"] },
+                { "text": "{{[amount].brb31rc}}", "slots": ["brb31rc"] }
+              ],
+              "confirmEnabled": false
+            },
+            "required": true
+          },
+          {
+            "id": "idn31rf",
+            "dialog": {
+              "prompt": [
+                {
+                  "id": "cktngs98y00d03m6m914y78m2",
+                  "content": [
+                    {
+                      "children": [
+                        {
+                          "text": "When should I send this? Please enter a specific date, for example: January 1st. "
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "confirm": [
+                {
+                  "id": "cktngs98y00d13m6mrie7pn4b",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "utterances": [
+                {
+                  "text": "Transfer it on {{[deliverydate].idn31rf}}",
+                  "slots": ["idn31rf"]
+                },
+                {
+                  "text": "on {{[deliverydate].idn31rf}}",
+                  "slots": ["idn31rf"]
+                },
+                {
+                  "text": "Make the transfer {{[deliverydate].idn31rf}}",
+                  "slots": ["idn31rf"]
+                },
+                {
+                  "text": "Send the transfer {{[deliverydate].idn31rf}}",
+                  "slots": ["idn31rf"]
+                },
+                {
+                  "text": "Transfer it {{[deliverydate].idn31rf}}",
+                  "slots": ["idn31rf"]
+                },
+                {
+                  "text": "Send it {{[deliverydate].idn31rf}}",
+                  "slots": ["idn31rf"]
+                },
+                {
+                  "text": "{{[deliverydate].idn31rf}} please",
+                  "slots": ["idn31rf"]
+                },
+                { "text": "{{[deliverydate].idn31rf}}", "slots": ["idn31rf"] }
+              ],
+              "confirmEnabled": false
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "key": "v69131d2",
+        "name": "edit_transfer",
+        "inputs": [
+          {
+            "text": "no, change that to {{[contact].cta31ts}}",
+            "slots": ["cta31ts"]
+          },
+          {
+            "text": "no, change to the {{[deliverydate].idn31rf}}",
+            "slots": ["idn31rf"]
+          },
+          {
+            "text": "no, change to {{[amount].brb31rc}}",
+            "slots": ["brb31rc"]
+          },
+          {
+            "text": "send ${{[amount].brb31rc}} instead",
+            "slots": ["brb31rc"]
+          },
+          {
+            "text": "Actually send {{[amount].brb31rc}} instead",
+            "slots": ["brb31rc"]
+          },
+          {
+            "text": "send {{[amount].brb31rc}} dollars instead",
+            "slots": ["brb31rc"]
+          },
+          { "text": "send {{[amount].brb31rc}} instead", "slots": ["brb31rc"] },
+          {
+            "text": "actually can you send that {{[deliverydate].idn31rf}}",
+            "slots": ["idn31rf"]
+          },
+          {
+            "text": "actually can you send that {{[deliverydate].idn31rf}} instead",
+            "slots": ["idn31rf"]
+          },
+          {
+            "text": "actually can you send that on {{[deliverydate].idn31rf}} instead",
+            "slots": ["idn31rf"]
+          },
+          {
+            "text": "actually can you send that on {{[deliverydate].idn31rf}}",
+            "slots": ["idn31rf"]
+          },
+          {
+            "text": "actually make that {{[amount].brb31rc}}",
+            "slots": ["brb31rc"]
+          },
+          {
+            "text": "actually make that {{[deliverydate].idn31rf}}",
+            "slots": ["idn31rf"]
+          },
+          {
+            "text": "make the amount {{[amount].brb31rc}}",
+            "slots": ["brb31rc"]
+          },
+          {
+            "text": "make the amount {{[amount].brb31rc}} dollars",
+            "slots": ["brb31rc"]
+          },
+          {
+            "text": "make the date {{[deliverydate].idn31rf}}",
+            "slots": ["idn31rf"]
+          },
+          {
+            "text": "make the delivery date {{[deliverydate].idn31rf}}",
+            "slots": ["idn31rf"]
+          },
+          {
+            "text": "update the delivery date to {{[deliverydate].idn31rf}}",
+            "slots": ["idn31rf"]
+          },
+          {
+            "text": "update the amount to {{[amount].brb31rc}}",
+            "slots": ["brb31rc"]
+          },
+          {
+            "text": "change the amount to {{[amount].brb31rc}}",
+            "slots": ["brb31rc"]
+          },
+          {
+            "text": "change the name to {{[contact].cta31ts}}",
+            "slots": ["cta31ts"]
+          },
+          {
+            "text": "change the person to {{[contact].cta31ts}}",
+            "slots": ["cta31ts"]
+          },
+          {
+            "text": "change the date to {{[deliverydate].idn31rf}}",
+            "slots": ["idn31rf"]
+          }
+        ],
+        "slots": [
+          {
+            "id": "idn31rf",
+            "dialog": {
+              "prompt": [
+                {
+                  "id": "cktngs98y00d23m6mp8emhatx",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "confirm": [
+                {
+                  "id": "cktngs98y00d33m6mbo1qr8si",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "utterances": [],
+              "confirmEnabled": false
+            },
+            "required": false
+          },
+          {
+            "id": "cta31ts",
+            "dialog": {
+              "prompt": [
+                {
+                  "id": "cktngs98y00d43m6mkykh5uks",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "confirm": [
+                {
+                  "id": "cktngs98y00d53m6mgnebrc1s",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "utterances": [],
+              "confirmEnabled": false
+            },
+            "required": false
+          },
+          {
+            "id": "brb31rc",
+            "dialog": {
+              "prompt": [
+                {
+                  "id": "cktngs98z00d63m6m7n44kc0i",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "confirm": [
+                {
+                  "id": "cktngs98z00d73m6myeln23sx",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "utterances": [],
+              "confirmEnabled": false
+            },
+            "required": false
+          }
+        ]
+      },
+      { "key": "VF.CANCEL", "name": "VF.CANCEL", "inputs": [], "slots": [] },
+      {
+        "key": "VF.YES",
+        "name": "VF.YES",
+        "inputs": [
+          { "text": "yup thats perfect", "slots": [] },
+          { "text": "yep thats perfect", "slots": [] },
+          { "text": "yeah that would be great", "slots": [] },
+          { "text": "yep", "slots": [] },
+          { "text": "yes thank you", "slots": [] },
+          { "text": "yes please", "slots": [] },
+          { "text": "yes that would be great", "slots": [] },
+          { "text": "Go ahead", "slots": [] },
+          { "text": "Yes", "slots": [] },
+          { "text": "Yup", "slots": [] },
+          { "text": "Yeah", "slots": [] }
+        ],
+        "slots": []
+      },
+      {
+        "key": "or1331gw",
+        "name": "spending_category",
+        "inputs": [
+          {
+            "text": "how much did I spend on {{[category].vt2p31mk}} ",
+            "slots": ["vt2p31mk"]
+          },
+          { "text": "{{[category].vt2p31mk}}", "slots": ["vt2p31mk"] },
+          { "text": "Show {{[category].vt2p31mk}}", "slots": ["vt2p31mk"] },
+          {
+            "text": "Show the {{[category].vt2p31mk}} transactions",
+            "slots": ["vt2p31mk"]
+          },
+          {
+            "text": "Just the {{[category].vt2p31mk}} transactions please",
+            "slots": ["vt2p31mk"]
+          },
+          {
+            "text": "Show me all transactions for {{[category].vt2p31mk}}",
+            "slots": ["vt2p31mk"]
+          },
+          {
+            "text": "Show the transactions for {{[category].vt2p31mk}}",
+            "slots": ["vt2p31mk"]
+          }
+        ],
+        "slots": [
+          {
+            "id": "vt2p31mk",
+            "dialog": {
+              "prompt": [
+                {
+                  "id": "cktngs98z00d83m6m5lizbveu",
+                  "content": [
+                    {
+                      "children": [
+                        { "text": "Which category of transactions?" }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "confirm": [
+                {
+                  "id": "cktngs98z00d93m6mkjh4oubk",
+                  "content": [{ "children": [{ "text": "" }] }]
+                }
+              ],
+              "utterances": [
+                { "text": "{{[category].vt2p31mk}}", "slots": ["vt2p31mk"] }
+              ],
+              "confirmEnabled": false
+            },
+            "required": true
+          }
+        ]
+      },
+      {
+        "key": "VF.NO",
+        "name": "VF.NO",
+        "inputs": [
+          { "text": "Done", "slots": [] },
+          { "text": "All finished", "slots": [] },
+          { "text": "Nope", "slots": [] },
+          { "text": "No, that's fine", "slots": [] },
+          { "text": "Nope, that's okay", "slots": [] }
+        ],
+        "slots": []
+      },
+      {
+        "key": "vpjg3arx",
+        "name": "Nope",
+        "inputs": [{ "text": "No", "slots": [] }],
+        "slots": []
+      },
+      {
+        "key": "nfji3aqy",
+        "name": "nearest_branch",
+        "inputs": [
+          { "text": "locate me my nearest branch", "slots": [] },
+          { "text": "find me my nearest branch", "slots": [] },
+          { "text": "where's my nearest branch", "slots": [] },
+          { "text": "nearest branch", "slots": [] },
+          { "text": "near branch", "slots": [] },
+          { "text": "branch", "slots": [] },
+          { "text": "nearest location", "slots": [] },
+          { "text": "closest branch", "slots": [] },
+          { "text": "closest location", "slots": [] },
+          { "text": "closest bank", "slots": [] },
+          { "text": "where's the closest branch", "slots": [] },
+          { "text": "where is the cloest branch ", "slots": [] },
+          { "text": "where is the nearest branch", "slots": [] },
+          { "text": "show me the nearest branch", "slots": [] }
+        ],
+        "slots": []
+      },
+      {
+        "key": "24jy3atf",
+        "name": "confirmation",
+        "inputs": [
+          { "text": "great", "slots": [] },
+          { "text": "goodthanks", "slots": [] },
+          { "text": "okay", "slots": [] },
+          { "text": "cool", "slots": [] },
+          { "text": "perfect", "slots": [] },
+          { "text": "sounds good", "slots": [] },
+          { "text": "good", "slots": [] }
+        ],
+        "slots": []
+      },
+      {
+        "key": "rck63agx",
+        "name": "account_balance",
+        "inputs": [
+          { "text": "what is my account balance ", "slots": [] },
+          { "text": "account balance ", "slots": [] },
+          { "text": "whats my balance", "slots": [] },
+          { "text": "what's the balance", "slots": [] },
+          { "text": "balance", "slots": [] },
+          { "text": "what's my checkings account balance", "slots": [] },
+          { "text": "whats the balanace in my checkings account", "slots": [] },
+          { "text": "checkings account balance ", "slots": [] },
+          { "text": "how much money do i have in my account", "slots": [] },
+          { "text": "what's my balance", "slots": [] },
+          { "text": "tell me my account balance", "slots": [] }
+        ],
+        "slots": []
+      },
+      { "key": "VF.HELP", "name": "VF.HELP", "inputs": [], "slots": [] }
+    ],
+    "settings": { "restart": true, "repeat": 100, "locales": ["en-US"] },
+    "publishing": {},
+    "platform": "general"
+  },
+  "rootDiagramID": "61d64afce6b43f00068effee",
+  "creatorID": 40923
+}
